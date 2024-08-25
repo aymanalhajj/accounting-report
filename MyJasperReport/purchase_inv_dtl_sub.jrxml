@@ -1,5 +1,5 @@
 <!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
-<jasperReport name="SalesInvDtlSub" language="java" columnCount="1" pageWidth="204" pageHeight="841" columnWidth="204" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d5b8bd15-a638-48d5-9a4f-05a25be99210">
+<jasperReport name="purchase_inv_dtl_sub" language="java" columnCount="1" pageWidth="204" pageHeight="841" columnWidth="204" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d5b8bd15-a638-48d5-9a4f-05a25be99210">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ACCOUNTING"/>
 	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver/"/>
@@ -48,7 +48,7 @@ FROM
     POST_DISCOUNT_TOTAL_PRICE + VAT_VALUE TOTAL_PRICE,
     TOTAL_AMOUNT
 FROM
-    SALES_INV_DTL I JOIN SALES_PRODUCT P ON I.PRODUCT_ID = P.PRODUCT_ID
+    SALES_PURCHASE_INV_DTL I JOIN SALES_PRODUCT P ON I.PRODUCT_ID = P.PRODUCT_ID
 WHERE INVOICE_ID = $P{P_INV_ID}]]></query>
 	<field name="PRODUCT_NAME" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="PRODUCT_NAME"/>
@@ -117,7 +117,7 @@ WHERE INVOICE_ID = $P{P_INV_ID}]]></query>
 				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="2043707a-eb8b-42d9-a666-97db62e2d2af" x="121" y="7" width="78" height="14" backcolor="#D7D9D9" fontName="Arial Custom" fontSize="8.0" italic="false" bold="false" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="2043707a-eb8b-42d9-a666-97db62e2d2af" x="121" y="7" width="78" height="14" backcolor="#D7D9D9" fontName="Arial Custom" fontSize="8.0" bold="false" italic="false" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[المنتج والخدمة]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="160bb1cf-83be-40fa-93cf-06deb8a45cca"/>
 			<property name="com.jaspersoft.studio.unit.width" value="px"/>

@@ -58,7 +58,7 @@ FROM
     INVOICE_ID,
     QR_CODE
 FROM
-    SALES_INV_R
+    SALES_PURCHASE_INV_R
 WHERE INVOICE_ID = $P{P_INV_ID}]]></query>
 	<field name="INVOICE_NO" class="java.math.BigDecimal">
 		<property name="com.jaspersoft.studio.field.name" value="INVOICE_NO"/>
@@ -216,11 +216,10 @@ WHERE INVOICE_ID = $P{P_INV_ID}]]></query>
 				<expression><![CDATA[$F{INV_AMOUNT}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			</element>
-			<element kind="component" uuid="79472330-a9d1-4660-bce0-311c00d30ad9" x="30" y="90" width="150" height="110">
+			<element kind="component" uuid="554252f1-59da-4b49-ae8b-f657853f6d93" x="40" y="90" width="140" height="110">
 				<component kind="barcode4j:QRCode">
 					<codeExpression><![CDATA[$F{QR_CODE}]]></codeExpression>
 				</component>
-				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
 		</band>
 	</detail>

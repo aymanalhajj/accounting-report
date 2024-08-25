@@ -46,7 +46,7 @@ WHERE
 		<property name="com.jaspersoft.studio.field.label" value="LOGO"/>
 	</field>
 	<background splitType="Stretch"/>
-	<title height="153" splitType="Stretch">
+	<title height="170" splitType="Stretch">
 		<element kind="staticText" uuid="3637d9fc-30a5-4e49-8b82-86cecaaa8ab1" x="149" y="75" width="50" height="15" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right" vTextAlign="Middle">
 			<paragraph lineSpacingSize="2.0"/>
 			<text><![CDATA[الرقم الضريبي:]]></text>
@@ -71,7 +71,7 @@ WHERE
 			<text><![CDATA[جوال:]]></text>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
-		<element kind="staticText" uuid="ce8ac687-da30-4a05-8c89-83ca8710639e" x="5" y="128" width="192" height="18" fontName="Arial Custom" fontSize="9.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="ce8ac687-da30-4a05-8c89-83ca8710639e" x="5" y="147" width="192" height="18" fontName="Arial Custom" fontSize="9.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[فاتورة ضريبية مبسطة: Simplified Tax Invoice]]></text>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
@@ -85,12 +85,20 @@ WHERE
 		<element kind="textField" uuid="f64bf550-6457-405f-9452-cf19f0b1a3f0" x="5" y="111" width="65" height="15" fontName="Arial Custom" fontSize="10.0" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$F{MOBILE_NO}]]></expression>
 		</element>
-		<element kind="rectangle" uuid="0584bd4a-d651-45c1-9c25-7cbff58a1579" x="8" y="148" width="189" height="2">
+		<element kind="rectangle" uuid="0584bd4a-d651-45c1-9c25-7cbff58a1579" x="8" y="167" width="189" height="2">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<pen lineWidth="1.0"/>
 		</element>
 		<element kind="image" uuid="8833752d-1866-4a78-98b3-71c17bdb7205" x="80" y="3" width="46" height="43">
 			<expression><![CDATA[$F{LOGO}]]></expression>
+		</element>
+		<element kind="textField" uuid="fc0c90a0-5cff-4cbf-98f8-95da5ab0a32b" x="5" y="130" width="161" height="15" fontName="Arial Custom" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[$F{SREET}]]></expression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="staticText" uuid="97fb544d-d714-4c19-aca1-7ee133082f00" x="169" y="130" width="30" height="15" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right" vTextAlign="Middle">
+			<text><![CDATA[العنوان:]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
 	</title>
 </jasperReport>

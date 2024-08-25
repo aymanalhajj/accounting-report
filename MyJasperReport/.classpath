@@ -7,9 +7,7 @@
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="net.sf.jasperreports.JR_CONTAINER"/>
 	<classpathentry exported="true" kind="con" path="com.jaspersoft.server.JRS_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/HicomTech/JaspersoftWorkspace/arial_ext.jar"/>
-	<classpathentry kind="lib" path="G:/Movies/How-To-add-QR-Code-In-jasper-using-JasperSoft-Studio/How-To-add-QR-Code-In-jasper-using-JasperSoft-Studio-Tibco-JasperSoft-Studio-main/barcode4j-2.1.jar"/>
-	<classpathentry kind="lib" path="G:/Movies/How-To-add-QR-Code-In-jasper-using-JasperSoft-Studio/How-To-add-QR-Code-In-jasper-using-JasperSoft-Studio-Tibco-JasperSoft-Studio-main/zxing-2.0-core.jar"/>
-	<classpathentry kind="lib" path="G:/Movies/How-To-add-QR-Code-In-jasper-using-JasperSoft-Studio/How-To-add-QR-Code-In-jasper-using-JasperSoft-Studio-Tibco-JasperSoft-Studio-main/zxing-j2se-1.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/HicomTech/JaspersoftWorkspace/Jars/core-2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/HicomTech/JaspersoftWorkspace/Jars/javase-2.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

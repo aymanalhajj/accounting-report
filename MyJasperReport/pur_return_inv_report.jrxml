@@ -1,5 +1,5 @@
 <!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
-<jasperReport name="purchase_inv_report" language="java" columnCount="1" pageWidth="209" pageHeight="841" columnWidth="209" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d5b8bd15-a638-48d5-9a4f-05a25be99210">
+<jasperReport name="pur_return_inv_report" language="java" columnCount="1" pageWidth="209" pageHeight="841" columnWidth="209" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d5b8bd15-a638-48d5-9a4f-05a25be99210">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ACCOUNTING"/>
 	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver/"/>
@@ -61,7 +61,7 @@ FROM
     INVOICE_ID,
     QR_CODE
 FROM
-    SALES_PURCHASE_INV_R
+    SALES_PUR_RETURN_INV_R
 WHERE INVOICE_ID = $P{P_INV_ID}]]></query>
 	<field name="INVOICE_NO" class="java.math.BigDecimal">
 		<property name="com.jaspersoft.studio.field.name" value="INVOICE_NO"/>
@@ -135,7 +135,7 @@ WHERE INVOICE_ID = $P{P_INV_ID}]]></query>
 		<element kind="staticText" uuid="db86ea1d-c501-4cbb-b828-823185215e23" x="161" y="29" width="42" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
 			<text><![CDATA[رقم الفاتورة:]]></text>
 		</element>
-		<element kind="staticText" uuid="f15f8196-7f3a-407c-9eae-07cdc47df506" x="149" y="52" width="54" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
+		<element kind="staticText" uuid="f15f8196-7f3a-407c-9eae-07cdc47df506" x="149" y="51" width="54" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
 			<text><![CDATA[تاريخ الفاتورة:]]></text>
 		</element>
 		<element kind="staticText" uuid="fd0048ff-f575-4df2-8a97-c8cc995c8617" x="161" y="71" width="42" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
@@ -158,13 +158,13 @@ WHERE INVOICE_ID = $P{P_INV_ID}]]></query>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
 		<element kind="staticText" uuid="dd2b8e9e-ee6d-48be-92f0-62f7de470667" x="9" y="3" width="190" height="20" fontName="Arial Custom" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
-			<text><![CDATA[فاتورة مشتريات - Purchase Invoice]]></text>
+			<text><![CDATA[مردودات مشتريات - Purchase Returns]]></text>
 		</element>
 		<element kind="textField" uuid="b76b37a6-1c16-4ea9-b72c-71d6efec1a64" x="4" y="71" width="147" height="12" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$F{INV_TYPE}]]></expression>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
-		<element kind="textField" uuid="e4724290-4471-4cc7-a7bc-af5ee039d2c9" x="4" y="91" width="147" height="12" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="e4724290-4471-4cc7-a7bc-af5ee039d2c9" x="5" y="91" width="147" height="12" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$F{P_NAME}]]></expression>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
@@ -172,13 +172,13 @@ WHERE INVOICE_ID = $P{P_INV_ID}]]></query>
 			<expression><![CDATA[$F{U_NAME}]]></expression>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
-		<element kind="textField" uuid="2495548f-b560-42cd-a490-824e76c91cc0" x="5" y="112" width="139" height="12" fontName="Arial Custom" bold="true" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="74baa5ab-26c5-4bec-93d7-b2dc1d7cbabf" x="5" y="112" width="139" height="12" fontName="Arial Custom" bold="true" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$F{P_TAX_NO}]]></expression>
 		</element>
-		<element kind="textField" uuid="48d51bc4-f805-42cd-9086-6b3a4cbce7d6" x="80" y="51" width="64" height="12" fontName="Arial Custom" bold="false" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="textField" uuid="ff801b86-a7f5-4a29-9a97-93e5a9c8a5ce" x="80" y="51" width="64" height="12" fontName="Arial Custom" bold="false" hTextAlign="Center" vTextAlign="Middle">
 			<expression><![CDATA[$F{INVOICE_DATE}]]></expression>
 		</element>
-		<element kind="textField" uuid="4f7c1ca4-5265-43b4-972c-05034f3a14b9" x="25" y="50" width="47" height="13" fontName="Arial Custom" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="textField" uuid="50ee1006-6a7e-42f0-9035-6478a0f4826a" x="25" y="50" width="47" height="13" fontName="Arial Custom" hTextAlign="Center" vTextAlign="Middle">
 			<expression><![CDATA[$F{INVOICE_TIME}]]></expression>
 		</element>
 	</pageHeader>
@@ -186,7 +186,7 @@ WHERE INVOICE_ID = $P{P_INV_ID}]]></query>
 		<band height="28" splitType="Stretch">
 			<element kind="subreport" uuid="70908b85-d851-4dc7-a2fe-b17dd03162fc" stretchType="ContainerHeight" x="4" y="4" width="200" height="20">
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<expression><![CDATA["purchase_inv_dtl_sub.jasper"]]></expression>
+				<expression><![CDATA["pur_return_inv_dtl_sub.jrxml"]]></expression>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<parameter name="P_COMPANY_ID">
 					<expression><![CDATA[$P{P_COMPANY_ID}]]></expression>

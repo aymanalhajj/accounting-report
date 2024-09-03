@@ -1,5 +1,5 @@
 <!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
-<jasperReport name="sales_report_dtl_sub" language="java" columnCount="1" pageWidth="595" pageHeight="842" orientation="Landscape" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d5b8bd15-a638-48d5-9a4f-05a25be99210" floatColumnFooter="true">
+<jasperReport name="purchases_report_dtl_sub" language="java" columnCount="1" pageWidth="595" pageHeight="842" orientation="Landscape" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d5b8bd15-a638-48d5-9a4f-05a25be99210" floatColumnFooter="true">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ACCOUNTING"/>
 	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver/"/>
@@ -29,7 +29,7 @@
     VAT_VALUE,
     TOTAL_AMOUNT
 FROM
-    TABLE ( SALES_R(
+    TABLE ( PURCHASES_R(
                    P_FROM_DATE => $P{P_FROM_DATE},
                    P_TO_DATE => $P{P_TO_DATE},
                    P_BRANCH_ID => $P{P_BRANCH_ID}

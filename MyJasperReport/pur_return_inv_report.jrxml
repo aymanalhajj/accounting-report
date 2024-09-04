@@ -10,46 +10,14 @@
 	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
 	<property name="ireport.jasperserver.report.resource" value="/reports/purchase_inv_report_files/main_jrxml"/>
-	<dataset name="Dataset1" uuid="9a615a69-6fc0-4cf6-b1d3-74201bf124bc">
-		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
-		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ACCOUNTING"/>
-		<query language="SQL"><![CDATA[SELECT
-    PRODUCT_ID,
-    QUANTITY,
-    DISCOUNT_VALUE,
-    POST_DISCOUNT_TOTAL_PRICE + VAT_VALUE TOTAL_PRICE,
-    TOTAL_AMOUNT
-FROM
-    SALES_INV_DTL]]></query>
-		<field name="PRODUCT_ID" class="java.math.BigDecimal">
-			<property name="com.jaspersoft.studio.field.name" value="PRODUCT_ID"/>
-			<property name="com.jaspersoft.studio.field.label" value="PRODUCT_ID"/>
-		</field>
-		<field name="QUANTITY" class="java.math.BigDecimal">
-			<property name="com.jaspersoft.studio.field.name" value="QUANTITY"/>
-			<property name="com.jaspersoft.studio.field.label" value="QUANTITY"/>
-		</field>
-		<field name="DISCOUNT_VALUE" class="java.math.BigDecimal">
-			<property name="com.jaspersoft.studio.field.name" value="DISCOUNT_VALUE"/>
-			<property name="com.jaspersoft.studio.field.label" value="DISCOUNT_VALUE"/>
-		</field>
-		<field name="TOTAL_PRICE" class="java.math.BigDecimal">
-			<property name="com.jaspersoft.studio.field.name" value="TOTAL_PRICE"/>
-			<property name="com.jaspersoft.studio.field.label" value="TOTAL_PRICE"/>
-		</field>
-		<field name="TOTAL_AMOUNT" class="java.math.BigDecimal">
-			<property name="com.jaspersoft.studio.field.name" value="TOTAL_AMOUNT"/>
-			<property name="com.jaspersoft.studio.field.label" value="TOTAL_AMOUNT"/>
-		</field>
-	</dataset>
 	<parameter name="P_COMPANY_ID" class="java.lang.String"/>
 	<parameter name="P_LANG_ID" class="java.lang.String"/>
 	<parameter name="P_INV_ID" class="java.lang.String"/>
 	<query language="SQL"><![CDATA[SELECT
     INVOICE_NO,
     DECODE($P{P_LANG_ID}, 1, INV_TYPE_EN,INV_TYPE_AR)INV_TYPE ,
-    TO_CHAR(INVOICE_DATE,'DD-MM-YYYY') INVOICE_DATE,
-    TO_CHAR(INVOICE_DATE,'HH24:MI:SS') INVOICE_TIME,
+    INVOICE_DATE,
+    INVOICE_TIME,
     P_NAME,
     P_TAX_NO,
     U_NAME,

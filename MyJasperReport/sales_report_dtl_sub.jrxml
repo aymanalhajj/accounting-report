@@ -183,9 +183,8 @@ FROM
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 			</element>
-			<element kind="textField" uuid="8db76497-8388-4838-b174-e56abb95ad1f" x="337" y="0" width="68" height="14" fontName="Arial Custom" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="8db76497-8388-4838-b174-e56abb95ad1f" x="337" y="0" width="68" height="14" fontName="Arial Custom" fontSize="10.0" pattern="DD-MM-yyyy" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{INVOICE_DATE}]]></expression>
-				<patternExpression><![CDATA[dd-MM-yyyy]]></patternExpression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5535978b-50b6-4dd6-85bb-e201f169173f"/>
 				<box>
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>

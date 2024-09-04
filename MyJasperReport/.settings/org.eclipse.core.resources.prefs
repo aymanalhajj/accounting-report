@@ -19,6 +19,7 @@ encoding/sales_purchases_emps_report.jrxml=UTF-8
 encoding/sales_report.jrxml=UTF-8
 encoding/sales_report_dtl_sub.jrxml=UTF-8
 encoding/sales_with_net_profits_dtl_sub.jrxml=UTF-8
+encoding/sales_with_net_profits_report.jrxml=UTF-8
 encoding/small_header_sub.jrxml=UTF-8
 encoding/stores_statistics_dtl_sub.jrxml=UTF-8
 encoding/stores_statistics_report.jrxml=UTF-8

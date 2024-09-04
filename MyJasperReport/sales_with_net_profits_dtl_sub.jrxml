@@ -268,7 +268,7 @@ FROM
 		</band>
 	</detail>
 	<columnFooter height="57">
-		<element kind="staticText" uuid="bc6e553b-0d53-4b9e-9ca5-d6e9b501c234" x="416" y="2" width="168" height="22" fontName="Arial Custom" fontSize="16.0" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="bc6e553b-0d53-4b9e-9ca5-d6e9b501c234" x="416" y="2" width="170" height="22" fontName="Arial Custom" fontSize="16.0" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[الاجمالي]]></text>
 			<box>
 				<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>

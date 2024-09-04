@@ -1,5 +1,5 @@
 <!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
-<jasperReport name="purchase_inv_report_a4" language="java" columnCount="1" pageWidth="595" pageHeight="842" orientation="Landscape" columnWidth="585" leftMargin="5" rightMargin="5" topMargin="5" bottomMargin="5" uuid="d5b8bd15-a638-48d5-9a4f-05a25be99210">
+<jasperReport name="pur_return_inv_report_a4" language="java" columnCount="1" pageWidth="595" pageHeight="842" orientation="Landscape" columnWidth="585" leftMargin="5" rightMargin="5" topMargin="5" bottomMargin="5" uuid="d5b8bd15-a638-48d5-9a4f-05a25be99210">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ACCOUNTING"/>
 	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver/"/>
@@ -49,7 +49,7 @@ FROM
 	<query language="SQL"><![CDATA[SELECT
     INVOICE_NO,
     DECODE($P{P_LANG_ID}, 1, INV_TYPE_EN,INV_TYPE_AR)INV_TYPE ,
-    C_NAME,
+    P_NAME,
     U_NAME,
     PRE_TAX_AMOUNT,
     TOTAL_DIS,
@@ -69,9 +69,9 @@ WHERE INVOICE_ID = $P{P_INV_ID}]]></query>
 		<property name="com.jaspersoft.studio.field.name" value="INV_TYPE"/>
 		<property name="com.jaspersoft.studio.field.label" value="INV_TYPE"/>
 	</field>
-	<field name="C_NAME" class="java.lang.String">
-		<property name="com.jaspersoft.studio.field.name" value="C_NAME"/>
-		<property name="com.jaspersoft.studio.field.label" value="C_NAME"/>
+	<field name="P_NAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="P_NAME"/>
+		<property name="com.jaspersoft.studio.field.label" value="P_NAME"/>
 	</field>
 	<field name="U_NAME" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="U_NAME"/>
@@ -173,7 +173,7 @@ WHERE INVOICE_ID = $P{P_INV_ID}]]></query>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
 		<element kind="textField" uuid="e4724290-4471-4cc7-a7bc-af5ee039d2c9" x="395" y="128" width="118" height="12" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Right" vTextAlign="Middle">
-			<expression><![CDATA[$F{C_NAME}]]></expression>
+			<expression><![CDATA[$F{P_NAME}]]></expression>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
 		<element kind="staticText" uuid="a155c14a-a00f-41c8-9fc6-5da032a0f6c8" x="219" y="70" width="54" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">

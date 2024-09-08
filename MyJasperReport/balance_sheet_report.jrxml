@@ -1,5 +1,5 @@
 <!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
-<jasperReport name="account_statement_report" language="java" columnCount="1" pageWidth="595" pageHeight="842" orientation="Landscape" columnWidth="585" leftMargin="5" rightMargin="5" topMargin="5" bottomMargin="5" uuid="d5b8bd15-a638-48d5-9a4f-05a25be99210">
+<jasperReport name="balance_sheet_report" language="java" columnCount="1" pageWidth="595" pageHeight="842" orientation="Landscape" columnWidth="585" leftMargin="5" rightMargin="5" topMargin="5" bottomMargin="5" uuid="d5b8bd15-a638-48d5-9a4f-05a25be99210">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ACCOUNTING"/>
 	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver/"/>
@@ -11,23 +11,17 @@
 	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="263"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="731"/>
 	<parameter name="P_COMPANY_ID" class="java.lang.String"/>
 	<parameter name="P_LANG_ID" class="java.lang.String"/>
 	<parameter name="P_TO_DATE" class="java.lang.String"/>
-	<parameter name="P_FROM_DATE" class="java.lang.String"/>
-	<parameter name="P_ACCOUNT_ID" class="java.lang.String"/>
 	<parameter name="P_COST_CTR_ID" class="java.lang.String"/>
-	<query language="SQL"><![CDATA[SELECT (SELECT ACCOUNT_ID ||' - '||DECODE($P{P_LANG_ID},1,NVL(ACCOUNT_NAME_EN,ACCOUNT_NAME_AR),	NVL(ACCOUNT_NAME_AR,ACCOUNT_NAME_EN))
-FROM ACC_ACCOUNTS ACC
-WHERE  ACCOUNT_ID = $P{P_ACCOUNT_ID}) ACC_NAME,
-DECODE(NVL($P{P_COST_CTR_ID},0),0,'الكل',(SELECT DECODE($P{P_LANG_ID},1,NVL(COST_CTR_NAME_EN,COST_CTR_NAME_AR),	NVL(COST_CTR_NAME_AR,COST_CTR_NAME_EN))
-FROM ACC_COST_CENTER
-WHERE  COST_CTR_ID = $P{P_COST_CTR_ID})) COST_CTR_NAME
-FROM DUAL]]></query>
-	<field name="ACC_NAME" class="java.lang.String">
-		<property name="com.jaspersoft.studio.field.name" value="ACC_NAME"/>
-		<property name="com.jaspersoft.studio.field.label" value="ACC_NAME"/>
-	</field>
+	<query language="SQL"><![CDATA[SELECT 
+DECODE(NVL($P{P_COST_CTR_ID},0),0,'الكل', (SELECT DECODE($P{P_LANG_ID},1,NVL(COST_CTR_NAME_EN,COST_CTR_NAME_AR),	NVL(COST_CTR_NAME_AR,COST_CTR_NAME_EN))
+	FROM ACC_COST_CENTER
+WHERE  COST_CTR_ID = $P{P_COST_CTR_ID}) ) COST_CTR_NAME
+	FROM DUAL]]></query>
 	<field name="COST_CTR_NAME" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="COST_CTR_NAME"/>
 		<property name="com.jaspersoft.studio.field.label" value="COST_CTR_NAME"/>
@@ -44,15 +38,12 @@ FROM DUAL]]></query>
 			</parameter>
 		</element>
 	</title>
-	<pageHeader height="75" splitType="Stretch">
-		<element kind="staticText" uuid="db86ea1d-c501-4cbb-b828-823185215e23" x="540" y="30" width="30" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
-			<text><![CDATA[الحساب]]></text>
-		</element>
-		<element kind="staticText" uuid="f15f8196-7f3a-407c-9eae-07cdc47df506" x="530" y="51" width="40" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
-			<text><![CDATA[من تاريخ]]></text>
+	<pageHeader height="54" splitType="Stretch">
+		<element kind="staticText" uuid="db86ea1d-c501-4cbb-b828-823185215e23" x="530" y="30" width="40" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
+			<text><![CDATA[الى تاريخ]]></text>
 		</element>
 		<element kind="staticText" uuid="dd2b8e9e-ee6d-48be-92f0-62f7de470667" x="181" y="0" width="259" height="20" fontName="Arial Custom" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
-			<text><![CDATA[كشف حركة حساب - Account Statement]]></text>
+			<text><![CDATA[ميزانية عمومية حسابات تحليلية - Balance Sheet]]></text>
 			<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
 				<pen lineWidth="0.25"/>
 				<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
@@ -61,23 +52,8 @@ FROM DUAL]]></query>
 				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="8a4851a5-1f36-4917-a964-59b1261bb45a" x="252" y="49" width="40" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
-			<text><![CDATA[الى تاريخ ]]></text>
-		</element>
 		<element kind="staticText" uuid="bd61814e-8035-43d9-bf1d-27533f872b5c" x="305" y="28" width="43" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
-			<text><![CDATA[Account No]]></text>
-		</element>
-		<element kind="staticText" uuid="7262f781-dea4-47bc-ae35-e98c0074561f" x="305" y="49" width="55" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
-			<text><![CDATA[From Date]]></text>
-		</element>
-		<element kind="staticText" uuid="23cc93a9-8905-430d-b5fa-e62b14614fc9" x="19" y="50" width="68" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
 			<text><![CDATA[To Date]]></text>
-		</element>
-		<element kind="textField" uuid="fb7be9ad-fb9c-40f2-87f1-1ecf50e8d709" x="127" y="51" width="113" height="12" fontName="Arial Custom" hTextAlign="Right" vTextAlign="Middle">
-			<expression><![CDATA[$P{P_TO_DATE}]]></expression>
-		</element>
-		<element kind="textField" uuid="b6da5474-ec0e-48ab-9a9f-cbc82338b0f8" x="418" y="50" width="100" height="12" fontName="Arial Custom" hTextAlign="Right" vTextAlign="Middle">
-			<expression><![CDATA[$P{P_FROM_DATE}]]></expression>
 		</element>
 		<element kind="staticText" uuid="aff46252-60dd-4143-afd4-fd17c4fbb07d" x="250" y="28" width="45" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
 			<text><![CDATA[مركز التكلفة]]></text>
@@ -85,10 +61,10 @@ FROM DUAL]]></query>
 		<element kind="staticText" uuid="e4a5810a-45a5-42f6-86c7-d1760b77e8fd" x="19" y="28" width="68" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
 			<text><![CDATA[Cost Center]]></text>
 		</element>
-		<element kind="textField" uuid="4ca369e9-ca7b-4f67-b436-f5f3aea3acab" x="360" y="30" width="158" height="12" fontName="Arial Custom" hTextAlign="Right" vTextAlign="Middle">
-			<expression><![CDATA[$F{ACC_NAME}]]></expression>
+		<element kind="textField" uuid="4ca369e9-ca7b-4f67-b436-f5f3aea3acab" x="360" y="30" width="158" height="12" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Right" vTextAlign="Middle">
+			<expression><![CDATA[$P{P_TO_DATE}]]></expression>
 		</element>
-		<element kind="textField" uuid="412b3a68-19c7-4afb-82dc-c7f47346308c" x="87" y="28" width="153" height="12" fontName="Arial Custom" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="412b3a68-19c7-4afb-82dc-c7f47346308c" x="87" y="28" width="153" height="12" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$F{COST_CTR_NAME}]]></expression>
 		</element>
 	</pageHeader>
@@ -96,21 +72,15 @@ FROM DUAL]]></query>
 		<band height="29" splitType="Stretch">
 			<element kind="subreport" uuid="2b5954bd-d36d-44cf-b1aa-46cc3d95afb8" x="3" y="0" width="576" height="24">
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<expression><![CDATA["account_statement_dtl_sub.jrxml"]]></expression>
-				<parameter name="P_FROM_DATE">
-					<expression><![CDATA[$P{P_FROM_DATE}]]></expression>
-				</parameter>
-				<parameter name="P_TO_DATE">
-					<expression><![CDATA[$P{P_TO_DATE}]]></expression>
-				</parameter>
-				<parameter name="P_ACCOUNT_ID">
-					<expression><![CDATA[$P{P_ACCOUNT_ID}]]></expression>
-				</parameter>
+				<expression><![CDATA["balance_sheet_dtl_sub.jrxml"]]></expression>
 				<parameter name="P_COMPANY_ID">
 					<expression><![CDATA[$P{P_COMPANY_ID}]]></expression>
 				</parameter>
 				<parameter name="P_LANG_ID">
 					<expression><![CDATA[$P{P_LANG_ID}]]></expression>
+				</parameter>
+				<parameter name="P_TO_DATE">
+					<expression><![CDATA[$P{P_TO_DATE}]]></expression>
 				</parameter>
 			</element>
 		</band>

@@ -17,7 +17,9 @@
 	<parameter name="P_COMPANY_ID" class="java.lang.String"/>
 	<parameter name="P_LANG_ID" class="java.lang.String"/>
 	<parameter name="P_INV_ID" class="java.lang.String"/>
-	<query language="SQL"><![CDATA[SELECT P."BARCODE",
+	<query language="SQL"><![CDATA[SELECT 
+	ROW_NUMBER() over(order by 1) seq,
+	P."BARCODE",
 	DECODE( $P{P_LANG_ID},1,P.PRODUCT_NAME_EN,P.PRODUCT_NAME_AR) PRODUCT_NAME,
 	DECODE( $P{P_LANG_ID},1,U.UNIT_NAME_EN,U.UNIT_NAME_AR) UNIT_NAME,
 	I."QUANTITY",
@@ -33,6 +35,10 @@ FROM "SALES_PURCHASE_INV_DTL" I
 	 I."PRODUCT_UNIT_ID" = U."UNIT_ID" 
 WHERE 
 	 I."INVOICE_ID" = $P{P_INV_ID}]]></query>
+	<field name="SEQ" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="SEQ"/>
+		<property name="com.jaspersoft.studio.field.label" value="SEQ"/>
+	</field>
 	<field name="BARCODE" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="BARCODE"/>
 		<property name="com.jaspersoft.studio.field.label" value="BARCODE"/>
@@ -287,7 +293,7 @@ WHERE
 				</box>
 			</element>
 			<element kind="textField" uuid="d7f0b6c5-ea7f-4392-ba95-9577d92626ae" x="560" y="0" width="26" height="20" fontName="Arial Custom" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
-				<expression><![CDATA[$F{BARCODE}]]></expression>
+				<expression><![CDATA[$F{SEQ}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="160bb1cf-83be-40fa-93cf-06deb8a45cca"/>
 				<box>
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>

@@ -105,7 +105,7 @@ FROM TABLE ( STORES_STATISTICS_R(
 				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="2043707a-eb8b-42d9-a666-97db62e2d2af" x="283" y="5" width="146" height="14" backcolor="#D7D9D9" fontName="Arial Custom" fontSize="10.0" italic="false" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="2043707a-eb8b-42d9-a666-97db62e2d2af" x="283" y="5" width="146" height="14" backcolor="#D7D9D9" fontName="Arial Custom" fontSize="10.0" bold="true" italic="false" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[المنتج والخدمة]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="160bb1cf-83be-40fa-93cf-06deb8a45cca"/>
 			<property name="com.jaspersoft.studio.unit.width" value="px"/>

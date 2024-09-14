@@ -5,7 +5,6 @@
 	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver/"/>
 	<property name="ireport.jasperserver.user" value="jasperadmin"/>
 	<property name="ireport.jasperserver.reportUnit" value="/reports/small_header_sub"/>
-	<property name="ireport.jasperserver.report.resource" value="/reports/small_header_sub_files/main_jrxml"/>
 	<parameter name="P_COMPANY_ID" class="java.lang.String"/>
 	<query language="SQL"><![CDATA[SELECT com."NAME_AR",
 	com."TAX_NO",

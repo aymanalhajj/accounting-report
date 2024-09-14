@@ -1,11 +1,10 @@
 <!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
-<jasperReport name="pur_return_inv_dtl_sub_a4" language="java" columnCount="1" pageWidth="595" pageHeight="842" orientation="Landscape" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d5b8bd15-a638-48d5-9a4f-05a25be99210" floatColumnFooter="true">
+<jasperReport name="first_period_stock_inv_dtl_sub_a4" language="java" columnCount="1" pageWidth="595" pageHeight="842" orientation="Landscape" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d5b8bd15-a638-48d5-9a4f-05a25be99210" floatColumnFooter="true">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ACCOUNTING"/>
 	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver/"/>
 	<property name="ireport.jasperserver.user" value="jasperadmin"/>
-	<property name="ireport.jasperserver.reportUnit" value="/reports/purchase_inv_dtl_sub"/>
-	<property name="ireport.jasperserver.report.resource" value="/reports/purchase_inv_dtl_sub_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/reports/purchase_inv_dtl_sub_a4"/>
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
@@ -18,28 +17,22 @@
 	<parameter name="P_COMPANY_ID" class="java.lang.String"/>
 	<parameter name="P_LANG_ID" class="java.lang.String"/>
 	<parameter name="P_INV_ID" class="java.lang.String"/>
-	<query language="SQL"><![CDATA[SELECT 
-	ROW_NUMBER() over(order by 1) seq,
-	P."BARCODE",
+	<query language="SQL"><![CDATA[SELECT P."BARCODE",
 	DECODE( $P{P_LANG_ID},1,P.PRODUCT_NAME_EN,P.PRODUCT_NAME_AR) PRODUCT_NAME,
 	DECODE( $P{P_LANG_ID},1,U.UNIT_NAME_EN,U.UNIT_NAME_AR) UNIT_NAME,
 	I."QUANTITY",
 	ROUND(I.PRICE,3)  PRICE,
-	ROUND(I.TOTAL_PRICE,3) TOTAL_PRICE,
-	ROUND(I.VAT_PERCENTAGE,3) VAT_PERCENTAGE,
-	ROUND(I.VAT_VALUE,3) VAT_VALUE,
+	ROUND(I.TOTAL_AMOUNT,3) TOTAL_PRICE,
+	ROUND(0,3) VAT_PERCENTAGE,
+	ROUND(0,3) VAT_VALUE,
 	ROUND(I.TOTAL_AMOUNT,3) TOTAL_AMOUNT
-FROM "SALES_PUR_RETURN_INV_DTL" I
+FROM "STORE_FIRST_PERIOD_STOCK_DTL" I
 	JOIN "SALES_PRODUCT" P ON 
 	 I."PRODUCT_ID" = P."PRODUCT_ID" 
 	JOIN "SETUP_UNIT" U ON 
 	 I."PRODUCT_UNIT_ID" = U."UNIT_ID" 
 WHERE 
 	 I."INVOICE_ID" = $P{P_INV_ID}]]></query>
-	<field name="SEQ" class="java.math.BigDecimal">
-		<property name="com.jaspersoft.studio.field.name" value="SEQ"/>
-		<property name="com.jaspersoft.studio.field.label" value="SEQ"/>
-	</field>
 	<field name="BARCODE" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="BARCODE"/>
 		<property name="com.jaspersoft.studio.field.label" value="BARCODE"/>
@@ -294,7 +287,7 @@ WHERE
 				</box>
 			</element>
 			<element kind="textField" uuid="d7f0b6c5-ea7f-4392-ba95-9577d92626ae" x="560" y="0" width="26" height="20" fontName="Arial Custom" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
-				<expression><![CDATA[$F{SEQ}]]></expression>
+				<expression><![CDATA[$F{BARCODE}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="160bb1cf-83be-40fa-93cf-06deb8a45cca"/>
 				<box>
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>

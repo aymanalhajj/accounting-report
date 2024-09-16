@@ -134,7 +134,7 @@ WHERE INVOICE_ID = $P{P_INV_ID}]]></query>
 		<element kind="staticText" uuid="a8fcc1a0-3f16-4ab4-a1a5-9c5823ec99f2" x="508" y="131" width="54" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
 			<text><![CDATA[الرقم الضريبي :]]></text>
 		</element>
-		<element kind="textField" uuid="317d728c-8093-49c7-97b2-a511923096e1" x="387" y="30" width="104" height="12" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="317d728c-8093-49c7-97b2-a511923096e1" x="387" y="30" width="104" height="12" fontName="Arial Custom" fontSize="10.0" blankWhenNull="true" bold="true" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$F{INVOICE_NO}]]></expression>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
@@ -148,7 +148,7 @@ WHERE INVOICE_ID = $P{P_INV_ID}]]></query>
 				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="textField" uuid="b76b37a6-1c16-4ea9-b72c-71d6efec1a64" x="387" y="72" width="104" height="12" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="b76b37a6-1c16-4ea9-b72c-71d6efec1a64" x="387" y="72" width="104" height="12" fontName="Arial Custom" fontSize="10.0" blankWhenNull="true" bold="true" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$F{INV_TYPE}]]></expression>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
@@ -234,7 +234,7 @@ WHERE INVOICE_ID = $P{P_INV_ID}]]></query>
 			<expression><![CDATA[$F{STORE_DATE}]]></expression>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
-		<element kind="textField" uuid="f4ccee03-b6c0-4044-9d25-6549e1fd810b" x="387" y="51" width="104" height="12" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="f4ccee03-b6c0-4044-9d25-6549e1fd810b" x="387" y="51" width="104" height="12" fontName="Arial Custom" fontSize="10.0" blankWhenNull="true" bold="true" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$F{INVOICE_DATE}]]></expression>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
@@ -278,23 +278,23 @@ WHERE INVOICE_ID = $P{P_INV_ID}]]></query>
 				<text><![CDATA[إجمالي المبلغ المستحق]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			</element>
-			<element kind="textField" uuid="462b576f-c5c3-44a1-bdb4-c12e2c3b1a4f" x="266" y="10" width="118" height="13" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="462b576f-c5c3-44a1-bdb4-c12e2c3b1a4f" x="266" y="10" width="118" height="13" fontName="Arial Custom" fontSize="10.0" blankWhenNull="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{PRE_TAX_AMOUNT}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			</element>
-			<element kind="textField" uuid="ad4ab982-e1ea-45ab-9e97-d4cde5d01f43" x="266" y="27" width="118" height="13" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="ad4ab982-e1ea-45ab-9e97-d4cde5d01f43" x="266" y="27" width="118" height="13" fontName="Arial Custom" fontSize="10.0" blankWhenNull="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{TOTAL_DIS}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			</element>
-			<element kind="textField" uuid="36a0b1de-3bbe-4cc6-8cdd-19f9135c98e9" x="266" y="44" width="118" height="13" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="36a0b1de-3bbe-4cc6-8cdd-19f9135c98e9" x="266" y="44" width="118" height="13" fontName="Arial Custom" fontSize="10.0" blankWhenNull="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{POST_DIS_AMOUNT}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			</element>
-			<element kind="textField" uuid="15e417cc-e288-4160-b916-abf3d46c79cf" x="266" y="61" width="118" height="13" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="15e417cc-e288-4160-b916-abf3d46c79cf" x="266" y="61" width="118" height="13" fontName="Arial Custom" fontSize="10.0" blankWhenNull="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{TOTAL_VAT}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			</element>
-			<element kind="textField" uuid="06a5f3af-839f-4eb6-8574-3c7e05feb627" x="266" y="79" width="118" height="13" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="06a5f3af-839f-4eb6-8574-3c7e05feb627" x="266" y="79" width="118" height="13" fontName="Arial Custom" fontSize="10.0" blankWhenNull="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{INV_AMOUNT}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			</element>
@@ -326,23 +326,26 @@ WHERE INVOICE_ID = $P{P_INV_ID}]]></query>
 		</band>
 	</detail>
 	<columnFooter splitType="Stretch"/>
-	<pageFooter height="20" splitType="Stretch">
-		<element kind="staticText" uuid="91ede77f-f02b-4610-a565-350d3d3a6c32" x="518" y="7" width="42" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
+	<pageFooter height="17" splitType="Stretch">
+		<element kind="staticText" uuid="91ede77f-f02b-4610-a565-350d3d3a6c32" x="518" y="3" width="42" height="14" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
 			<text><![CDATA[المستخدم:]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
-		<element kind="textField" uuid="58701ebb-4552-454c-8028-6290ecb22349" x="370" y="7" width="146" height="12" fontName="Arial Custom" fontSize="8.0" bold="true" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="58701ebb-4552-454c-8028-6290ecb22349" x="370" y="3" width="146" height="14" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" bold="true" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$P{P_USER_NAME}]]></expression>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
-		<element kind="staticText" uuid="8e774841-1695-4f46-8a3e-f6dea1fbb7e1" x="174" y="7" width="54" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
+		<element kind="staticText" uuid="8e774841-1695-4f46-8a3e-f6dea1fbb7e1" x="174" y="3" width="54" height="14" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
 			<text><![CDATA[تاريخ الطباعة]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
-		<element kind="textField" uuid="acff2f46-0640-4205-8f86-0a49306c228f" x="80" y="7" width="90" height="13" pattern="dd-MM-yyyy">
+		<element kind="textField" uuid="acff2f46-0640-4205-8f86-0a49306c228f" x="80" y="3" width="90" height="14" pattern="dd-MM-yyyy">
 			<expression><![CDATA[new java.util.Date()]]></expression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
-		<element kind="textField" uuid="b3702828-b29a-44dc-9141-2a636b33a49f" x="20" y="7" width="50" height="13" pattern="HH:mm">
+		<element kind="textField" uuid="b3702828-b29a-44dc-9141-2a636b33a49f" x="20" y="3" width="50" height="14" pattern="HH:mm">
 			<expression><![CDATA[new java.util.Date()]]></expression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
 	</pageFooter>
-	<summary height="24" splitType="Stretch"/>
 </jasperReport>

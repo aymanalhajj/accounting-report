@@ -87,16 +87,16 @@ FROM
 		<element kind="staticText" uuid="23cc93a9-8905-430d-b5fa-e62b14614fc9" positionType="FixRelativeToBottom" x="10" y="54" width="77" height="18" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
 			<text><![CDATA[To Date]]></text>
 		</element>
-		<element kind="textField" uuid="fb7be9ad-fb9c-40f2-87f1-1ecf50e8d709" positionType="FixRelativeToBottom" x="102" y="54" width="131" height="18" fontName="Arial Custom" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="textField" uuid="fb7be9ad-fb9c-40f2-87f1-1ecf50e8d709" positionType="FixRelativeToBottom" x="102" y="54" width="131" height="18" fontName="Arial Custom" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
 			<expression><![CDATA[$P{P_TO_DATE}]]></expression>
 		</element>
-		<element kind="textField" uuid="b6da5474-ec0e-48ab-9a9f-cbc82338b0f8" positionType="FixRelativeToBottom" x="370" y="54" width="148" height="18" fontName="Arial Custom" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="textField" uuid="b6da5474-ec0e-48ab-9a9f-cbc82338b0f8" positionType="FixRelativeToBottom" x="370" y="54" width="148" height="18" fontName="Arial Custom" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
 			<expression><![CDATA[$P{P_FROM_DATE}]]></expression>
 		</element>
 		<element kind="staticText" uuid="af317515-187c-4bcb-b2d3-8708ba7b6498" positionType="FixRelativeToBottom" x="500" y="28" width="79" height="18" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
 			<text><![CDATA[اجمالي فواتير للعميل  /]]></text>
 		</element>
-		<element kind="textField" uuid="83826318-ce7d-422e-8959-d62605525cab" positionType="FixRelativeToBottom" x="240" y="28" width="250" height="18" fontName="Arial Custom" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="83826318-ce7d-422e-8959-d62605525cab" positionType="FixRelativeToBottom" x="240" y="28" width="250" height="18" fontName="Arial Custom" blankWhenNull="true" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$F{CLIENT_NAME}]]></expression>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
@@ -127,7 +127,7 @@ FROM
 			</box>
 		</element>
 		<element kind="staticText" uuid="12026ced-f9cb-48fd-99c3-3076953099f5" mode="Opaque" x="294" y="0" width="106" height="18" backcolor="#CFCCCC" fontName="Arial Custom" fontSize="9.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
-			<text><![CDATA[تاريخ الفاتورة]]></text>
+			<text><![CDATA[التاريخ]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="77e98bde-67a5-4b69-8d12-e8a06ff9018e"/>
 			<property name="com.jaspersoft.studio.unit.y" value="px"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -139,7 +139,7 @@ FROM
 			</box>
 		</element>
 		<element kind="staticText" uuid="943e5bee-fa17-4c2d-88b9-11c462a053d3" mode="Opaque" x="140" y="0" width="154" height="18" backcolor="#CFCCCC" fontName="Arial Custom" fontSize="9.0" bold="true" italic="false" hTextAlign="Center" vTextAlign="Middle">
-			<text><![CDATA[رقم الفاتورة الاصلية]]></text>
+			<text><![CDATA[اجمالي المشتريات]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="160bb1cf-83be-40fa-93cf-06deb8a45cca"/>
 			<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -152,7 +152,7 @@ FROM
 			</box>
 		</element>
 		<element kind="staticText" uuid="3f1705fc-f9c5-4548-8a55-55d392572bcf" mode="Opaque" x="0" y="0" width="140" height="18" backcolor="#CFCCCC" fontName="Arial Custom" fontSize="9.0" bold="true" italic="false" hTextAlign="Center" vTextAlign="Middle">
-			<text><![CDATA[تاريخها]]></text>
+			<text><![CDATA[اجمالي المبيعات]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="160bb1cf-83be-40fa-93cf-06deb8a45cca"/>
 			<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -167,7 +167,7 @@ FROM
 	</columnHeader>
 	<detail>
 		<band height="18" splitType="Stretch">
-			<element kind="textField" uuid="bdb1454e-e24e-4d9e-80a4-9a2f2241f86a" x="500" y="0" width="84" height="18" fontName="Arial Custom" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="bdb1454e-e24e-4d9e-80a4-9a2f2241f86a" x="500" y="0" width="84" height="18" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{INVOICE_TYPE}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="71ef7258-f261-45d6-b48e-6c5955c87591"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -178,7 +178,7 @@ FROM
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 			</element>
-			<element kind="textField" uuid="cc565d66-1913-4cdd-b426-28a1596d7448" x="400" y="0" width="100" height="18" fontName="Arial Custom" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="cc565d66-1913-4cdd-b426-28a1596d7448" x="400" y="0" width="100" height="18" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{INVOICE_NO}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5535978b-50b6-4dd6-85bb-e201f169173f"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -189,7 +189,7 @@ FROM
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 			</element>
-			<element kind="textField" uuid="186e232a-7034-425d-a6a8-d5fa92a058b7" x="294" y="0" width="106" height="18" fontName="Arial Custom" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="186e232a-7034-425d-a6a8-d5fa92a058b7" x="294" y="0" width="106" height="18" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{INVOICE_DATE}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="77e98bde-67a5-4b69-8d12-e8a06ff9018e"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -230,7 +230,7 @@ FROM
 			<text><![CDATA[المستخدم:]]></text>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
-		<element kind="textField" uuid="58701ebb-4552-454c-8028-6290ecb22349" x="370" y="7" width="169" height="14" fontName="Arial Custom" fontSize="8.0" bold="true" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="58701ebb-4552-454c-8028-6290ecb22349" x="370" y="7" width="169" height="14" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" bold="true" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$P{P_USER_NAME}]]></expression>
 		</element>
 		<element kind="textField" uuid="873aeafa-b9a4-4410-9a27-e8cb5c373bd0" x="2" y="7" width="100" height="14">
@@ -265,7 +265,7 @@ FROM
 				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="textField" uuid="6748ec4e-ca63-464b-8e02-db5472aa37c3" x="140" y="0" width="154" height="18" fontName="Arial Custom" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="textField" uuid="6748ec4e-ca63-464b-8e02-db5472aa37c3" x="140" y="0" width="154" height="18" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
 			<expression><![CDATA[$V{PURCHASE_TOT}]]></expression>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ba29ad92-8168-43ca-a62e-66087f7e4f1f"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>

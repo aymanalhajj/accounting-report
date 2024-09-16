@@ -187,7 +187,7 @@ WHERE INVOICE_ID = $P{P_INV_ID}]]></query>
 			<text><![CDATA[الرقم الضريبي :]]></text>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
-		<element kind="textField" uuid="317d728c-8093-49c7-97b2-a511923096e1" x="420" y="30" width="113" height="14" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="317d728c-8093-49c7-97b2-a511923096e1" x="420" y="30" width="113" height="14" fontName="Arial Custom" fontSize="10.0" blankWhenNull="true" bold="true" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$F{INVOICE_NO}]]></expression>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
@@ -262,13 +262,13 @@ WHERE INVOICE_ID = $P{P_INV_ID}]]></query>
 			<text><![CDATA[Inv. Type]]></text>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
-		<element kind="textField" uuid="4bd56835-a4bf-478b-875b-ef04a3ab86e9" x="400" y="51" width="100" height="14" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="4bd56835-a4bf-478b-875b-ef04a3ab86e9" x="400" y="51" width="100" height="14" fontName="Arial Custom" fontSize="10.0" blankWhenNull="true" bold="true" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$F{INVOICE_DATE}]]></expression>
 		</element>
-		<element kind="textField" uuid="5c1f3b7a-6ba4-4af5-9794-9b6d5c22e670" x="85" y="30" width="113" height="14" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="5c1f3b7a-6ba4-4af5-9794-9b6d5c22e670" x="85" y="30" width="113" height="14" fontName="Arial Custom" fontSize="10.0" blankWhenNull="true" bold="true" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$F{INV_TYPE}]]></expression>
 		</element>
-		<element kind="textField" uuid="a818a5bc-b361-4180-89d1-a62ba13184de" x="86" y="50" width="113" height="14" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="a818a5bc-b361-4180-89d1-a62ba13184de" x="86" y="50" width="113" height="14" fontName="Arial Custom" fontSize="10.0" blankWhenNull="true" bold="true" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$F{STORE_DATE}]]></expression>
 		</element>
 	</pageHeader>
@@ -310,23 +310,23 @@ WHERE INVOICE_ID = $P{P_INV_ID}]]></query>
 				<text><![CDATA[إجمالي المبلغ المستحق]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			</element>
-			<element kind="textField" uuid="462b576f-c5c3-44a1-bdb4-c12e2c3b1a4f" x="251" y="10" width="140" height="13" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="462b576f-c5c3-44a1-bdb4-c12e2c3b1a4f" x="251" y="10" width="140" height="13" fontName="Arial Custom" fontSize="10.0" blankWhenNull="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{PRE_TAX_AMOUNT}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			</element>
-			<element kind="textField" uuid="ad4ab982-e1ea-45ab-9e97-d4cde5d01f43" x="251" y="27" width="140" height="13" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="ad4ab982-e1ea-45ab-9e97-d4cde5d01f43" x="251" y="27" width="140" height="13" fontName="Arial Custom" fontSize="10.0" blankWhenNull="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{TOTAL_DIS}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			</element>
-			<element kind="textField" uuid="36a0b1de-3bbe-4cc6-8cdd-19f9135c98e9" x="251" y="44" width="140" height="13" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="36a0b1de-3bbe-4cc6-8cdd-19f9135c98e9" x="251" y="44" width="140" height="13" fontName="Arial Custom" fontSize="10.0" blankWhenNull="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{POST_DIS_AMOUNT}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			</element>
-			<element kind="textField" uuid="15e417cc-e288-4160-b916-abf3d46c79cf" x="251" y="61" width="140" height="13" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="15e417cc-e288-4160-b916-abf3d46c79cf" x="251" y="61" width="140" height="13" fontName="Arial Custom" fontSize="10.0" blankWhenNull="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{TOTAL_VAT}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			</element>
-			<element kind="textField" uuid="06a5f3af-839f-4eb6-8574-3c7e05feb627" x="251" y="79" width="140" height="13" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="06a5f3af-839f-4eb6-8574-3c7e05feb627" x="251" y="79" width="140" height="13" fontName="Arial Custom" fontSize="10.0" blankWhenNull="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{INV_AMOUNT}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			</element>
@@ -358,25 +358,29 @@ WHERE INVOICE_ID = $P{P_INV_ID}]]></query>
 		</band>
 	</detail>
 	<columnFooter splitType="Stretch"/>
-	<pageFooter height="21" splitType="Stretch">
-		<element kind="staticText" uuid="91ede77f-f02b-4610-a565-350d3d3a6c32" x="518" y="9" width="56" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
+	<pageFooter height="23" splitType="Stretch">
+		<element kind="staticText" uuid="91ede77f-f02b-4610-a565-350d3d3a6c32" x="518" y="9" width="56" height="14" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
 			<text><![CDATA[المستخدم:]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
-		<element kind="textField" uuid="58701ebb-4552-454c-8028-6290ecb22349" x="370" y="9" width="146" height="12" fontName="Arial Custom" fontSize="8.0" bold="true" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="58701ebb-4552-454c-8028-6290ecb22349" x="370" y="9" width="146" height="14" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" bold="true" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$P{P_USER_NAME}]]></expression>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
 		<element kind="line" uuid="ed2b1ec8-9156-4a57-bea0-6477bc335c77" x="4" y="4" width="581" height="3">
 			<pen lineWidth="2.0"/>
 		</element>
-		<element kind="staticText" uuid="a0da0650-6587-40af-b0aa-c736c0747ea5" x="174" y="9" width="54" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
+		<element kind="staticText" uuid="a0da0650-6587-40af-b0aa-c736c0747ea5" x="174" y="9" width="54" height="14" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
 			<text><![CDATA[تاريخ الطباعة]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
-		<element kind="textField" uuid="0b95fe5b-2a66-48f9-9f9d-f60fa4433be6" x="80" y="7" width="90" height="14" pattern="dd-MM-yyyy">
+		<element kind="textField" uuid="0b95fe5b-2a66-48f9-9f9d-f60fa4433be6" x="80" y="9" width="90" height="14" pattern="dd-MM-yyyy">
 			<expression><![CDATA[new java.util.Date()]]></expression>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
 		</element>
-		<element kind="textField" uuid="0736f51c-4fde-4ab2-b8a6-acea75ea32ab" x="20" y="7" width="50" height="14" pattern="HH:mm">
+		<element kind="textField" uuid="0736f51c-4fde-4ab2-b8a6-acea75ea32ab" x="20" y="9" width="50" height="14" pattern="HH:mm">
 			<expression><![CDATA[new java.util.Date()]]></expression>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
 		</element>
 	</pageFooter>
 	<summary height="24" splitType="Stretch"/>

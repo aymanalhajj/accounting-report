@@ -344,7 +344,7 @@ FROM
 	</columnHeader>
 	<detail>
 		<band height="20" splitType="Stretch">
-			<element kind="textField" uuid="bdb1454e-e24e-4d9e-80a4-9a2f2241f86a" x="539" y="0" width="45" height="20" fontName="Arial Custom" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="bdb1454e-e24e-4d9e-80a4-9a2f2241f86a" x="539" y="0" width="45" height="20" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{INVOICE_TYPE}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="71ef7258-f261-45d6-b48e-6c5955c87591"/>
 				<box>
@@ -354,7 +354,7 @@ FROM
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 			</element>
-			<element kind="textField" uuid="cc565d66-1913-4cdd-b426-28a1596d7448" x="491" y="0" width="48" height="20" fontName="Arial Custom" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="cc565d66-1913-4cdd-b426-28a1596d7448" x="491" y="0" width="48" height="20" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{INVOICE_NO}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5535978b-50b6-4dd6-85bb-e201f169173f"/>
 				<box>
@@ -364,7 +364,7 @@ FROM
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 			</element>
-			<element kind="textField" uuid="186e232a-7034-425d-a6a8-d5fa92a058b7" x="453" y="0" width="38" height="20" fontName="Arial Custom" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="186e232a-7034-425d-a6a8-d5fa92a058b7" x="453" y="0" width="38" height="20" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{INVOICE_DATE}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="77e98bde-67a5-4b69-8d12-e8a06ff9018e"/>
 				<box>
@@ -374,7 +374,7 @@ FROM
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 			</element>
-			<element kind="textField" uuid="f60e0af6-cd96-4416-9783-a3abb6b0583a" x="405" y="0" width="48" height="20" fontName="Arial Custom" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="f60e0af6-cd96-4416-9783-a3abb6b0583a" x="405" y="0" width="48" height="20" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{PRE_TAX_TOTAL_AMOUNT}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ba29ad92-8168-43ca-a62e-66087f7e4f1f"/>
 				<box>
@@ -384,7 +384,7 @@ FROM
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 			</element>
-			<element kind="textField" uuid="629e3215-e3bc-43a7-95d8-e6dbd03198dd" x="365" y="0" width="40" height="20" fontName="Arial Custom" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="629e3215-e3bc-43a7-95d8-e6dbd03198dd" x="365" y="0" width="40" height="20" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{TOTAL_DISCOUNT}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ba29ad92-8168-43ca-a62e-66087f7e4f1f"/>
 				<box>
@@ -394,7 +394,7 @@ FROM
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 			</element>
-			<element kind="textField" uuid="26745c9e-4637-44d6-a968-cb4741553d76" x="313" y="0" width="52" height="20" fontName="Arial Custom" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="26745c9e-4637-44d6-a968-cb4741553d76" x="313" y="0" width="52" height="20" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{POST_DISCOUNT_TOTAL_AMOUNT}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6bac69c4-3d65-4a5b-8a97-d0770f175936"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -406,7 +406,7 @@ FROM
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 			</element>
-			<element kind="textField" uuid="042ff0b2-4466-4f7e-842e-39775adcf8a1" x="269" y="0" width="44" height="20" fontName="Arial Custom" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="042ff0b2-4466-4f7e-842e-39775adcf8a1" x="269" y="0" width="44" height="20" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{TOTAL_VAT}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6bac69c4-3d65-4a5b-8a97-d0770f175936"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -418,7 +418,7 @@ FROM
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 			</element>
-			<element kind="textField" uuid="60af0f93-b4fe-484e-8ab5-a7840ca841d6" x="217" y="0" width="52" height="20" fontName="Arial Custom" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="60af0f93-b4fe-484e-8ab5-a7840ca841d6" x="217" y="0" width="52" height="20" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{INVOICE_TOTAL_AMOUNT}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6bac69c4-3d65-4a5b-8a97-d0770f175936"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -430,7 +430,7 @@ FROM
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 			</element>
-			<element kind="textField" uuid="d7d7f2b9-ff8c-4ac1-a5ca-2e173845771a" x="140" y="0" width="77" height="20" fontName="Arial Custom" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="d7d7f2b9-ff8c-4ac1-a5ca-2e173845771a" x="140" y="0" width="77" height="20" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{PROVIDER_NAME}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6bac69c4-3d65-4a5b-8a97-d0770f175936"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -482,7 +482,7 @@ FROM
 			<text><![CDATA[المستخدم:]]></text>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
-		<element kind="textField" uuid="58701ebb-4552-454c-8028-6290ecb22349" x="370" y="7" width="169" height="14" fontName="Arial Custom" fontSize="8.0" bold="true" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="58701ebb-4552-454c-8028-6290ecb22349" x="370" y="7" width="169" height="14" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" bold="true" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$P{P_USER_NAME}]]></expression>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
@@ -517,7 +517,7 @@ FROM
 				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="textField" uuid="6748ec4e-ca63-464b-8e02-db5472aa37c3" x="405" y="0" width="48" height="18" fontName="Arial Custom" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="textField" uuid="6748ec4e-ca63-464b-8e02-db5472aa37c3" x="405" y="0" width="48" height="18" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
 			<expression><![CDATA[$V{PRE_TAX_TOTAL_TOT}]]></expression>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ba29ad92-8168-43ca-a62e-66087f7e4f1f"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -528,7 +528,7 @@ FROM
 				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="textField" uuid="cebc99eb-99c7-43e7-81a6-3d93322461fc" x="365" y="0" width="40" height="18" fontName="Arial Custom" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="textField" uuid="cebc99eb-99c7-43e7-81a6-3d93322461fc" x="365" y="0" width="40" height="18" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
 			<expression><![CDATA[$V{TOTAL_DISCOUNT_TOT}]]></expression>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ba29ad92-8168-43ca-a62e-66087f7e4f1f"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -539,7 +539,7 @@ FROM
 				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="textField" uuid="68a896b1-10fa-4358-9501-a8f3540e55fe" x="313" y="0" width="52" height="18" fontName="Arial Custom" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="textField" uuid="68a896b1-10fa-4358-9501-a8f3540e55fe" x="313" y="0" width="52" height="18" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
 			<expression><![CDATA[$V{POST_DISCOUNT_TOTAL_AMOUNT_TOT}]]></expression>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ba29ad92-8168-43ca-a62e-66087f7e4f1f"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -550,7 +550,7 @@ FROM
 				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="textField" uuid="10c0a7e2-a575-4f81-bcdd-0342c8df640c" x="269" y="0" width="44" height="18" fontName="Arial Custom" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="textField" uuid="10c0a7e2-a575-4f81-bcdd-0342c8df640c" x="269" y="0" width="44" height="18" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
 			<expression><![CDATA[$V{TOTAL_VAT_TOT}]]></expression>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ba29ad92-8168-43ca-a62e-66087f7e4f1f"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -561,7 +561,7 @@ FROM
 				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="textField" uuid="16362555-2826-4138-9dda-5eb73e8eaae5" x="217" y="0" width="52" height="18" fontName="Arial Custom" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="textField" uuid="16362555-2826-4138-9dda-5eb73e8eaae5" x="217" y="0" width="52" height="18" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
 			<expression><![CDATA[$V{INVOICE_TOTAL_AMOUNT_TOT}]]></expression>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ba29ad92-8168-43ca-a62e-66087f7e4f1f"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>

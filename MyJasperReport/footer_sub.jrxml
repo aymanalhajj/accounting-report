@@ -1,0 +1,115 @@
+<!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
+<jasperReport name="footer_sub" language="java" columnCount="1" pageWidth="595" pageHeight="842" orientation="Landscape" columnWidth="585" leftMargin="5" rightMargin="5" topMargin="5" bottomMargin="5" uuid="d5b8bd15-a638-48d5-9a4f-05a25be99210">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ACCOUNTING"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.reportUnit" value="/reports/small_header_sub"/>
+	<property name="ireport.jasperserver.report.resource" value="/reports/small_header_sub_files/main_jrxml"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="P_COMPANY_ID" class="java.lang.String"/>
+	<query language="SQL"><![CDATA[SELECT com."NAME_AR",
+ com."NAME_EN",
+	FAX,
+	com."COMERCIAL_REC_NO",
+	com."TEL_NO",
+	com."MOBILE_NO",
+	com."SREET",
+	 logo
+FROM "ADMIN_COMPANY_R" com
+WHERE 
+	 com."COMPANY_ID" =  $P{P_COMPANY_ID} ]]></query>
+	<field name="NAME_AR" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NAME_AR"/>
+		<property name="com.jaspersoft.studio.field.label" value="NAME_AR"/>
+	</field>
+	<field name="NAME_EN" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NAME_EN"/>
+		<property name="com.jaspersoft.studio.field.label" value="NAME_EN"/>
+	</field>
+	<field name="FAX" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="FAX"/>
+		<property name="com.jaspersoft.studio.field.label" value="FAX"/>
+	</field>
+	<field name="COMERCIAL_REC_NO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="COMERCIAL_REC_NO"/>
+		<property name="com.jaspersoft.studio.field.label" value="COMERCIAL_REC_NO"/>
+	</field>
+	<field name="TEL_NO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TEL_NO"/>
+		<property name="com.jaspersoft.studio.field.label" value="TEL_NO"/>
+	</field>
+	<field name="MOBILE_NO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="MOBILE_NO"/>
+		<property name="com.jaspersoft.studio.field.label" value="MOBILE_NO"/>
+	</field>
+	<field name="SREET" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="SREET"/>
+		<property name="com.jaspersoft.studio.field.label" value="SREET"/>
+	</field>
+	<field name="LOGO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="LOGO"/>
+		<property name="com.jaspersoft.studio.field.label" value="LOGO"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="59" splitType="Stretch">
+		<element kind="staticText" uuid="c07383b7-54a0-426e-bf4f-af33669e7c75" x="195" y="14" width="30" height="15" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right" vTextAlign="Middle">
+			<text><![CDATA[الهاتف:]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="staticText" uuid="c03224c0-ac1b-4643-a0ba-4154b25d0d86" x="550" y="14" width="28" height="15" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right" vTextAlign="Middle">
+			<text><![CDATA[جوال:]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="textField" uuid="b3aa3a73-0fcb-4ea7-991a-ab5d481cdebf" x="53" y="14" width="134" height="15" fontName="Arial Custom" fontSize="10.0" hTextAlign="Right" vTextAlign="Middle">
+			<expression><![CDATA[$F{TEL_NO}]]></expression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="textField" uuid="f64bf550-6457-405f-9452-cf19f0b1a3f0" x="380" y="14" width="164" height="15" fontName="Arial Custom" fontSize="10.0" hTextAlign="Right" vTextAlign="Middle">
+			<expression><![CDATA[$F{MOBILE_NO}]]></expression>
+		</element>
+		<element kind="textField" uuid="fc0c90a0-5cff-4cbf-98f8-95da5ab0a32b" x="380" y="37" width="163" height="15" fontName="Arial Custom" hTextAlign="Right" vTextAlign="Middle">
+			<expression><![CDATA[$F{SREET}]]></expression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="staticText" uuid="97fb544d-d714-4c19-aca1-7ee133082f00" x="549" y="37" width="30" height="15" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right" vTextAlign="Middle">
+			<text><![CDATA[العنوان:]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="staticText" uuid="0ca01c50-d0a9-4d95-a7ba-9d143cf3db1d" x="4" y="14" width="26" height="15" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+			<text><![CDATA[Tel:]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="staticText" uuid="aba7a4ba-5c92-4998-bbb0-49b311b7a423" x="332" y="14" width="42" height="15" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+			<text><![CDATA[Mobile:]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="line" uuid="c333e190-6beb-475b-95cb-ab6b28375621" x="-6" y="6" width="596" height="1">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<pen lineWidth="2.0"/>
+		</element>
+		<element kind="staticText" uuid="d0d74886-b06a-462a-b302-882bd0ee92b9" x="332" y="37" width="42" height="15" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+			<text><![CDATA[Address:]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="staticText" uuid="f02a0ab7-badf-4c45-99a2-459415096cd5" x="4" y="35" width="26" height="15" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+			<paragraph lineSpacingSize="2.0"/>
+			<text><![CDATA[Fax:]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="textField" uuid="26c34cda-3932-4b57-a5a1-51057f7094fc" x="54" y="35" width="134" height="15" fontName="Arial Custom" fontSize="10.0" hTextAlign="Right" vTextAlign="Middle">
+			<expression><![CDATA[$F{FAX}]]></expression>
+		</element>
+		<element kind="staticText" uuid="a78a8d25-e6a9-4f04-ac6c-7f42aecc75ed" x="195" y="35" width="30" height="15" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right" vTextAlign="Middle">
+			<text><![CDATA[الفاكس:]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+	</title>
+</jasperReport>

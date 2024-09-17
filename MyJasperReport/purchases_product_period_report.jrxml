@@ -1,0 +1,299 @@
+<!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
+<jasperReport name="purchases_product_period" language="java" columnCount="1" pageWidth="595" pageHeight="842" orientation="Landscape" columnWidth="585" leftMargin="5" rightMargin="5" topMargin="5" bottomMargin="5" uuid="d5b8bd15-a638-48d5-9a4f-05a25be99210" floatColumnFooter="true">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="accounting"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.reportUnit" value="/reports/purchase_inv_report"/>
+	<property name="ireport.jasperserver.report.resource" value="/reports/purchase_inv_report_files/main_jrxml"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="P_COMPANY_ID" class="java.lang.String"/>
+	<parameter name="P_LANG_ID" class="java.lang.String"/>
+	<parameter name="P_TO_DATE" class="java.lang.String"/>
+	<parameter name="P_FROM_DATE" class="java.lang.String"/>
+	<parameter name="P_USER_NAME" class="java.lang.String"/>
+	<query language="SQL"><![CDATA[SELECT
+    PRODUCT_ID,
+    PRODUCT_NO ,
+   DECODE($P{P_LANG_ID},1,PRODUCT_NAME_EN,PRODUCT_NAME_AR) PRODUCT_NAME,
+	BARCODE,
+	PURCHASE_QUANTITY_TOTAL,
+	PURCHASE_AMOUNT_TOTAL
+FROM
+    TABLE ( PURCHASES_PRODUCT_R (
+						P_FROM_DATE   =>  $P{P_FROM_DATE},
+						P_TO_DATE     => $P{P_TO_DATE},
+						p_COMPANY_ID  => $P{P_COMPANY_ID}
+            ) )
+			order by PRODUCT_ID]]></query>
+	<field name="PRODUCT_ID" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="PRODUCT_ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="PRODUCT_ID"/>
+	</field>
+	<field name="PRODUCT_NO" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="PRODUCT_NO"/>
+		<property name="com.jaspersoft.studio.field.label" value="PRODUCT_NO"/>
+	</field>
+	<field name="PRODUCT_NAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="PRODUCT_NAME"/>
+		<property name="com.jaspersoft.studio.field.label" value="PRODUCT_NAME"/>
+	</field>
+	<field name="BARCODE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="BARCODE"/>
+		<property name="com.jaspersoft.studio.field.label" value="BARCODE"/>
+	</field>
+	<field name="PURCHASE_QUANTITY_TOTAL" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="PURCHASE_QUANTITY_TOTAL"/>
+		<property name="com.jaspersoft.studio.field.label" value="PURCHASE_QUANTITY_TOTAL"/>
+	</field>
+	<field name="PURCHASE_AMOUNT_TOTAL" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="PURCHASE_AMOUNT_TOTAL"/>
+		<property name="com.jaspersoft.studio.field.label" value="PURCHASE_AMOUNT_TOTAL"/>
+	</field>
+	<variable name="PURCHASE_QUANTITY_TOT" calculation="Sum" class="java.math.BigDecimal">
+		<expression><![CDATA[$F{PURCHASE_QUANTITY_TOTAL}]]></expression>
+	</variable>
+	<variable name="PURCHASE_AMOUNT_TOT" calculation="Sum" class="java.math.BigDecimal">
+		<expression><![CDATA[$F{PURCHASE_AMOUNT_TOTAL}]]></expression>
+	</variable>
+	<background splitType="Stretch"/>
+	<pageHeader height="72" splitType="Stretch">
+		<element kind="staticText" uuid="f15f8196-7f3a-407c-9eae-07cdc47df506" positionType="FixRelativeToBottom" x="530" y="55" width="49" height="14" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left">
+			<text><![CDATA[من تاريخ]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="staticText" uuid="dd2b8e9e-ee6d-48be-92f0-62f7de470667" positionType="FixRelativeToBottom" mode="Opaque" x="102" y="29" width="388" height="20" backcolor="#CFCCCC" fontName="Arial Custom" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[تقريرمشتريات اصناف اجمالي خلال فترة - Total Purchases Report During Period]]></text>
+			<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+				<pen lineWidth="0.25"/>
+				<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="8a4851a5-1f36-4917-a964-59b1261bb45a" positionType="FixRelativeToBottom" x="240" y="55" width="52" height="14" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+			<text><![CDATA[الى تاريخ ]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="staticText" uuid="7262f781-dea4-47bc-ae35-e98c0074561f" positionType="FixRelativeToBottom" x="305" y="55" width="55" height="14" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+			<text><![CDATA[From Date]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="staticText" uuid="23cc93a9-8905-430d-b5fa-e62b14614fc9" positionType="FixRelativeToBottom" x="10" y="55" width="77" height="14" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+			<text><![CDATA[To Date]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="textField" uuid="fb7be9ad-fb9c-40f2-87f1-1ecf50e8d709" positionType="FixRelativeToBottom" x="102" y="55" width="131" height="14" fontName="Arial Custom" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[$P{P_TO_DATE}]]></expression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="textField" uuid="b6da5474-ec0e-48ab-9a9f-cbc82338b0f8" positionType="FixRelativeToBottom" x="370" y="55" width="148" height="14" fontName="Arial Custom" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[$P{P_FROM_DATE}]]></expression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="subreport" uuid="3a5d0503-617c-4aa9-bd6f-acb8a7155192" x="0" y="0" width="583" height="23">
+			<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+			<expression><![CDATA["header_report.jrxml"]]></expression>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			<parameter name="P_COMPANY_ID">
+				<expression><![CDATA[$P{P_COMPANY_ID}]]></expression>
+			</parameter>
+		</element>
+	</pageHeader>
+	<columnHeader height="18">
+		<element kind="staticText" uuid="58d63b37-4049-4c9d-8cd5-ce787ca27859" mode="Opaque" x="500" y="0" width="84" height="18" backcolor="#CFCCCC" fontName="Arial Custom" fontSize="9.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[رقم الصنف]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="71ef7258-f261-45d6-b48e-6c5955c87591"/>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<box>
+				<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="1bfedb33-d772-4370-bb36-e71f69f56ca7" mode="Opaque" x="400" y="0" width="100" height="18" backcolor="#CFCCCC" fontName="Arial Custom" fontSize="9.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[الباركورد]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5535978b-50b6-4dd6-85bb-e201f169173f"/>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<box>
+				<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="12026ced-f9cb-48fd-99c3-3076953099f5" mode="Opaque" x="294" y="0" width="106" height="18" backcolor="#CFCCCC" fontName="Arial Custom" fontSize="9.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[اسم الصنف]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="77e98bde-67a5-4b69-8d12-e8a06ff9018e"/>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<box>
+				<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="943e5bee-fa17-4c2d-88b9-11c462a053d3" mode="Opaque" x="140" y="0" width="154" height="18" backcolor="#CFCCCC" fontName="Arial Custom" fontSize="9.0" bold="true" italic="false" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[الكمية]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="160bb1cf-83be-40fa-93cf-06deb8a45cca"/>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<box>
+				<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="3f1705fc-f9c5-4548-8a55-55d392572bcf" mode="Opaque" x="0" y="0" width="140" height="18" backcolor="#CFCCCC" fontName="Arial Custom" fontSize="9.0" bold="true" italic="false" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[الاجمالي]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="160bb1cf-83be-40fa-93cf-06deb8a45cca"/>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<box>
+				<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<element kind="textField" uuid="bdb1454e-e24e-4d9e-80a4-9a2f2241f86a" x="500" y="0" width="84" height="18" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{PRODUCT_NO}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="71ef7258-f261-45d6-b48e-6c5955c87591"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="cc565d66-1913-4cdd-b426-28a1596d7448" x="400" y="0" width="100" height="18" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{BARCODE}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5535978b-50b6-4dd6-85bb-e201f169173f"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="186e232a-7034-425d-a6a8-d5fa92a058b7" x="294" y="0" width="106" height="18" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{PRODUCT_NAME}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="77e98bde-67a5-4b69-8d12-e8a06ff9018e"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="1d539169-a046-4176-a367-a815e1626878" x="140" y="0" width="154" height="18" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{PURCHASE_QUANTITY_TOTAL}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="160bb1cf-83be-40fa-93cf-06deb8a45cca"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="dd2522be-ec20-4b17-bfbc-f419a6f2bfe8" x="0" y="0" width="140" height="18" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{PURCHASE_AMOUNT_TOTAL}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="160bb1cf-83be-40fa-93cf-06deb8a45cca"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+		</band>
+	</detail>
+	<columnFooter splitType="Stretch"/>
+	<pageFooter height="21" splitType="Stretch">
+		<element kind="staticText" uuid="91ede77f-f02b-4610-a565-350d3d3a6c32" x="539" y="7" width="31" height="14" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
+			<text><![CDATA[المستخدم:]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="textField" uuid="58701ebb-4552-454c-8028-6290ecb22349" x="370" y="7" width="169" height="14" fontName="Arial Custom" fontSize="8.0" bold="true" hTextAlign="Right" vTextAlign="Middle">
+			<expression><![CDATA[$P{P_USER_NAME}]]></expression>
+		</element>
+		<element kind="textField" uuid="873aeafa-b9a4-4410-9a27-e8cb5c373bd0" x="2" y="7" width="100" height="14">
+			<expression><![CDATA[$V{PAGE_NUMBER}]]></expression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="staticText" uuid="a155c14a-a00f-41c8-9fc6-5da032a0f6c8" x="294" y="7" width="54" height="14" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
+			<text><![CDATA[تاريخ الطباعة]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="textField" uuid="0b4d45a7-0e84-4d65-9f3f-0f2bef1d9421" x="200" y="7" width="90" height="14" pattern="dd-MM-yyyy">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+		</element>
+		<element kind="textField" uuid="38388c6e-a2cd-492d-9a3d-07e5337538cf" x="140" y="7" width="50" height="14" pattern="HH:mm">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="line" uuid="dcd84660-cb4f-4a7c-9e58-7c23e200c010" x="0" y="3" width="583" height="1">
+			<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			<pen lineWidth="2.0"/>
+		</element>
+	</pageFooter>
+	<summary height="18">
+		<element kind="staticText" uuid="a0307612-570f-4a28-ac43-9a64c1fda908" x="294" y="0" width="290" height="18" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[الاجمالي :]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<box>
+				<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+		</element>
+		<element kind="textField" uuid="6748ec4e-ca63-464b-8e02-db5472aa37c3" x="140" y="0" width="154" height="18" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[$V{PURCHASE_QUANTITY_TOT}]]></expression>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ba29ad92-8168-43ca-a62e-66087f7e4f1f"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<box>
+				<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+		</element>
+		<element kind="textField" uuid="cebc99eb-99c7-43e7-81a6-3d93322461fc" x="0" y="0" width="140" height="18" fontName="Arial Custom" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[$V{PURCHASE_AMOUNT_TOT}]]></expression>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ba29ad92-8168-43ca-a62e-66087f7e4f1f"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<box>
+				<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+		</element>
+	</summary>
+</jasperReport>

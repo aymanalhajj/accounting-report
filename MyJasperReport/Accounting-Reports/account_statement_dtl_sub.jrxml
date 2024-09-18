@@ -89,7 +89,7 @@ WHERE
 				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="2043707a-eb8b-42d9-a666-97db62e2d2af" x="450" y="10" width="80" height="30" backcolor="#D7D9D9" fontName="Arial Custom" fontSize="10.0" bold="true" italic="false" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="2043707a-eb8b-42d9-a666-97db62e2d2af" x="450" y="10" width="80" height="30" backcolor="#D7D9D9" fontName="Arial Custom" fontSize="10.0" italic="false" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[Journal Date
 تاريخ القيد]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="160bb1cf-83be-40fa-93cf-06deb8a45cca"/>

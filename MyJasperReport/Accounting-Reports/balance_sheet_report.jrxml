@@ -28,22 +28,11 @@ WHERE  COST_CTR_ID = $P{P_COST_CTR_ID}) ) COST_CTR_NAME
 		<property name="com.jaspersoft.studio.field.label" value="COST_CTR_NAME"/>
 	</field>
 	<background splitType="Stretch"/>
-	<title height="29" splitType="Stretch">
-		<element kind="subreport" uuid="a7e764ff-8415-44a4-a418-860318f14a8e" x="3" y="2" width="576" height="23">
-			<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-			<expression><![CDATA["header_sub.jrxml"]]></expression>
-			<property name="com.jaspersoft.studio.unit.width" value="px"/>
-			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			<parameter name="P_COMPANY_ID">
-				<expression><![CDATA[$P{P_COMPANY_ID}]]></expression>
-			</parameter>
-		</element>
-	</title>
-	<pageHeader height="54" splitType="Stretch">
-		<element kind="staticText" uuid="db86ea1d-c501-4cbb-b828-823185215e23" x="530" y="30" width="40" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
+	<pageHeader height="200" splitType="Stretch">
+		<element kind="staticText" uuid="db86ea1d-c501-4cbb-b828-823185215e23" x="539" y="177" width="40" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
 			<text><![CDATA[الى تاريخ]]></text>
 		</element>
-		<element kind="staticText" uuid="dd2b8e9e-ee6d-48be-92f0-62f7de470667" x="181" y="0" width="259" height="20" fontName="Arial Custom" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="dd2b8e9e-ee6d-48be-92f0-62f7de470667" x="190" y="147" width="259" height="20" fontName="Arial Custom" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[ميزانية عمومية حسابات تحليلية - Balance Sheet]]></text>
 			<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
 				<pen lineWidth="0.25"/>
@@ -53,20 +42,29 @@ WHERE  COST_CTR_ID = $P{P_COST_CTR_ID}) ) COST_CTR_NAME
 				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="bd61814e-8035-43d9-bf1d-27533f872b5c" x="305" y="28" width="43" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+		<element kind="staticText" uuid="bd61814e-8035-43d9-bf1d-27533f872b5c" x="314" y="175" width="43" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
 			<text><![CDATA[To Date]]></text>
 		</element>
-		<element kind="staticText" uuid="aff46252-60dd-4143-afd4-fd17c4fbb07d" x="250" y="28" width="45" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
+		<element kind="staticText" uuid="aff46252-60dd-4143-afd4-fd17c4fbb07d" x="259" y="175" width="45" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
 			<text><![CDATA[مركز التكلفة]]></text>
 		</element>
-		<element kind="staticText" uuid="e4a5810a-45a5-42f6-86c7-d1760b77e8fd" x="19" y="28" width="68" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+		<element kind="staticText" uuid="e4a5810a-45a5-42f6-86c7-d1760b77e8fd" x="28" y="175" width="68" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
 			<text><![CDATA[Cost Center]]></text>
 		</element>
-		<element kind="textField" uuid="4ca369e9-ca7b-4f67-b436-f5f3aea3acab" x="360" y="30" width="158" height="12" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="4ca369e9-ca7b-4f67-b436-f5f3aea3acab" x="369" y="177" width="158" height="12" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$P{P_TO_DATE}]]></expression>
 		</element>
-		<element kind="textField" uuid="412b3a68-19c7-4afb-82dc-c7f47346308c" x="87" y="28" width="153" height="12" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="412b3a68-19c7-4afb-82dc-c7f47346308c" x="96" y="175" width="153" height="12" fontName="Arial Custom" fontSize="10.0" bold="true" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$F{COST_CTR_NAME}]]></expression>
+		</element>
+		<element kind="subreport" uuid="7e6b8d38-8a59-46e4-89de-d3c324113eae" x="3" y="1" width="576" height="139">
+			<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+			<expression><![CDATA["header_sub.jrxml"]]></expression>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<parameter name="P_COMPANY_ID">
+				<expression><![CDATA[$P{P_COMPANY_ID}]]></expression>
+			</parameter>
 		</element>
 	</pageHeader>
 	<detail>

@@ -63,22 +63,11 @@ FROM DUAL]]></query>
 		<property name="com.jaspersoft.studio.field.label" value="STORE_NAME"/>
 	</field>
 	<background splitType="Stretch"/>
-	<title height="29" splitType="Stretch">
-		<element kind="subreport" uuid="a7e764ff-8415-44a4-a418-860318f14a8e" x="3" y="2" width="576" height="23">
-			<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-			<expression><![CDATA["header_sub.jrxml"]]></expression>
-			<property name="com.jaspersoft.studio.unit.width" value="px"/>
-			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			<parameter name="P_COMPANY_ID">
-				<expression><![CDATA[$P{P_COMPANY_ID}]]></expression>
-			</parameter>
-		</element>
-	</title>
-	<pageHeader height="55" splitType="Stretch">
-		<element kind="staticText" uuid="db86ea1d-c501-4cbb-b828-823185215e23" x="540" y="30" width="30" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
+	<pageHeader height="196" splitType="Stretch">
+		<element kind="staticText" uuid="db86ea1d-c501-4cbb-b828-823185215e23" x="550" y="175" width="30" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
 			<text><![CDATA[المخزن]]></text>
 		</element>
-		<element kind="staticText" uuid="dd2b8e9e-ee6d-48be-92f0-62f7de470667" x="181" y="0" width="240" height="20" fontName="Arial Custom" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="dd2b8e9e-ee6d-48be-92f0-62f7de470667" x="191" y="145" width="240" height="20" fontName="Arial Custom" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[كشف جرد المخازن - Stores Statistics Report]]></text>
 			<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
 				<pen lineWidth="0.25"/>
@@ -88,11 +77,20 @@ FROM DUAL]]></query>
 				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="bd61814e-8035-43d9-bf1d-27533f872b5c" x="305" y="28" width="35" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+		<element kind="staticText" uuid="bd61814e-8035-43d9-bf1d-27533f872b5c" x="315" y="173" width="35" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
 			<text><![CDATA[Store]]></text>
 		</element>
-		<element kind="textField" uuid="8581789b-cda1-43fe-afff-ec865c56997c" x="370" y="28" width="148" height="12" fontName="Arial Custom" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="8581789b-cda1-43fe-afff-ec865c56997c" x="380" y="173" width="148" height="12" fontName="Arial Custom" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$F{STORE_NAME}]]></expression>
+		</element>
+		<element kind="subreport" uuid="eec31843-482d-484a-986b-8fb37d5ae1b0" x="3" y="1" width="576" height="139">
+			<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+			<expression><![CDATA["header_sub.jrxml"]]></expression>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<parameter name="P_COMPANY_ID">
+				<expression><![CDATA[$P{P_COMPANY_ID}]]></expression>
+			</parameter>
 		</element>
 	</pageHeader>
 	<detail>

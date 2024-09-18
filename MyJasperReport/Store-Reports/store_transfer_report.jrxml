@@ -60,25 +60,14 @@ WHERE
 		<property name="com.jaspersoft.studio.field.label" value="TO_STORE_NAME"/>
 	</field>
 	<background splitType="Stretch"/>
-	<title height="29" splitType="Stretch">
-		<element kind="subreport" uuid="a7e764ff-8415-44a4-a418-860318f14a8e" x="3" y="2" width="576" height="23">
-			<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-			<expression><![CDATA["header_sub.jrxml"]]></expression>
-			<property name="com.jaspersoft.studio.unit.width" value="px"/>
-			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			<parameter name="P_COMPANY_ID">
-				<expression><![CDATA[$P{P_COMPANY_ID}]]></expression>
-			</parameter>
-		</element>
-	</title>
-	<pageHeader height="75" splitType="Stretch">
-		<element kind="staticText" uuid="db86ea1d-c501-4cbb-b828-823185215e23" x="530" y="30" width="40" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
+	<pageHeader height="218" splitType="Stretch">
+		<element kind="staticText" uuid="db86ea1d-c501-4cbb-b828-823185215e23" x="532" y="181" width="40" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
 			<text><![CDATA[رقم الأمر]]></text>
 		</element>
-		<element kind="staticText" uuid="f15f8196-7f3a-407c-9eae-07cdc47df506" x="530" y="51" width="40" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
+		<element kind="staticText" uuid="f15f8196-7f3a-407c-9eae-07cdc47df506" x="532" y="202" width="40" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
 			<text><![CDATA[من مخزن]]></text>
 		</element>
-		<element kind="staticText" uuid="dd2b8e9e-ee6d-48be-92f0-62f7de470667" x="181" y="0" width="259" height="20" fontName="Arial Custom" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="dd2b8e9e-ee6d-48be-92f0-62f7de470667" x="183" y="151" width="259" height="20" fontName="Arial Custom" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[امر تحويل من مخزن الى آخر - Store Transfer Order]]></text>
 			<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
 				<pen lineWidth="0.25"/>
@@ -88,35 +77,44 @@ WHERE
 				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="8a4851a5-1f36-4917-a964-59b1261bb45a" x="252" y="49" width="40" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="staticText" uuid="8a4851a5-1f36-4917-a964-59b1261bb45a" x="254" y="200" width="40" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right" vTextAlign="Middle">
 			<text><![CDATA[الى مخزن]]></text>
 		</element>
-		<element kind="staticText" uuid="bd61814e-8035-43d9-bf1d-27533f872b5c" x="305" y="28" width="55" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+		<element kind="staticText" uuid="bd61814e-8035-43d9-bf1d-27533f872b5c" x="307" y="179" width="55" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
 			<text><![CDATA[Transfer No]]></text>
 		</element>
-		<element kind="staticText" uuid="7262f781-dea4-47bc-ae35-e98c0074561f" x="305" y="49" width="55" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+		<element kind="staticText" uuid="7262f781-dea4-47bc-ae35-e98c0074561f" x="307" y="200" width="55" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
 			<text><![CDATA[From Store]]></text>
 		</element>
-		<element kind="staticText" uuid="23cc93a9-8905-430d-b5fa-e62b14614fc9" x="19" y="50" width="68" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+		<element kind="staticText" uuid="23cc93a9-8905-430d-b5fa-e62b14614fc9" x="21" y="201" width="68" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
 			<text><![CDATA[To Store]]></text>
 		</element>
-		<element kind="textField" uuid="fb7be9ad-fb9c-40f2-87f1-1ecf50e8d709" x="127" y="51" width="113" height="12" fontName="Arial Custom" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="fb7be9ad-fb9c-40f2-87f1-1ecf50e8d709" x="129" y="202" width="113" height="12" fontName="Arial Custom" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$F{TO_STORE_NAME}]]></expression>
 		</element>
-		<element kind="textField" uuid="b6da5474-ec0e-48ab-9a9f-cbc82338b0f8" x="418" y="50" width="100" height="12" fontName="Arial Custom" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="b6da5474-ec0e-48ab-9a9f-cbc82338b0f8" x="420" y="201" width="100" height="12" fontName="Arial Custom" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$F{FROM_STORE_NAME}]]></expression>
 		</element>
-		<element kind="textField" uuid="4ca369e9-ca7b-4f67-b436-f5f3aea3acab" x="418" y="30" width="100" height="12" fontName="Arial Custom" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="4ca369e9-ca7b-4f67-b436-f5f3aea3acab" x="420" y="181" width="100" height="12" fontName="Arial Custom" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$F{TRANSFER_NO}]]></expression>
 		</element>
-		<element kind="staticText" uuid="25f92ac0-b42f-48ba-9b11-7906305dd6af" x="19" y="28" width="31" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+		<element kind="staticText" uuid="25f92ac0-b42f-48ba-9b11-7906305dd6af" x="21" y="179" width="31" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
 			<text><![CDATA[Date]]></text>
 		</element>
-		<element kind="textField" uuid="74236b7b-0faa-4ebd-af66-766a2476d82a" x="87" y="28" width="153" height="12" fontName="Arial Custom" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="74236b7b-0faa-4ebd-af66-766a2476d82a" x="89" y="179" width="153" height="12" fontName="Arial Custom" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$F{TRANSFER_DATE}]]></expression>
 		</element>
-		<element kind="staticText" uuid="eaf19d78-a1f4-4cb4-910e-c44bb10c6812" x="267" y="28" width="25" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
+		<element kind="staticText" uuid="eaf19d78-a1f4-4cb4-910e-c44bb10c6812" x="269" y="179" width="25" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
 			<text><![CDATA[التاريخ]]></text>
+		</element>
+		<element kind="subreport" uuid="2adbe188-ca62-445c-a694-a46515d542da" x="3" y="1" width="576" height="139">
+			<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+			<expression><![CDATA["header_sub.jrxml"]]></expression>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<parameter name="P_COMPANY_ID">
+				<expression><![CDATA[$P{P_COMPANY_ID}]]></expression>
+			</parameter>
 		</element>
 	</pageHeader>
 	<detail>

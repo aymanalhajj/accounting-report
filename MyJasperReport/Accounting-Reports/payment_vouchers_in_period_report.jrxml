@@ -42,22 +42,11 @@ WHERE
 		<property name="com.jaspersoft.studio.field.label" value="NOTE"/>
 	</field>
 	<background splitType="Stretch"/>
-	<title height="29" splitType="Stretch">
-		<element kind="subreport" uuid="a7e764ff-8415-44a4-a418-860318f14a8e" x="3" y="2" width="576" height="23">
-			<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-			<expression><![CDATA["header_sub.jrxml"]]></expression>
-			<property name="com.jaspersoft.studio.unit.width" value="px"/>
-			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			<parameter name="P_COMPANY_ID">
-				<expression><![CDATA[$P{P_COMPANY_ID}]]></expression>
-			</parameter>
-		</element>
-	</title>
-	<pageHeader height="49" splitType="Stretch">
-		<element kind="staticText" uuid="f15f8196-7f3a-407c-9eae-07cdc47df506" x="530" y="31" width="40" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
+	<pageHeader height="203" splitType="Stretch">
+		<element kind="staticText" uuid="f15f8196-7f3a-407c-9eae-07cdc47df506" x="529" y="181" width="40" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
 			<text><![CDATA[من تاريخ]]></text>
 		</element>
-		<element kind="staticText" uuid="dd2b8e9e-ee6d-48be-92f0-62f7de470667" x="181" y="0" width="259" height="20" fontName="Arial Custom" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="dd2b8e9e-ee6d-48be-92f0-62f7de470667" x="180" y="150" width="259" height="20" fontName="Arial Custom" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[سندات القبض خلال فترة - Payment Vouchers]]></text>
 			<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
 				<pen lineWidth="0.25"/>
@@ -67,24 +56,33 @@ WHERE
 				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="8a4851a5-1f36-4917-a964-59b1261bb45a" x="252" y="31" width="40" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="8a4851a5-1f36-4917-a964-59b1261bb45a" x="251" y="181" width="40" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[الى تاريخ ]]></text>
 		</element>
-		<element kind="staticText" uuid="7262f781-dea4-47bc-ae35-e98c0074561f" x="305" y="31" width="55" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+		<element kind="staticText" uuid="7262f781-dea4-47bc-ae35-e98c0074561f" x="304" y="181" width="55" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
 			<text><![CDATA[From Date]]></text>
 		</element>
-		<element kind="staticText" uuid="23cc93a9-8905-430d-b5fa-e62b14614fc9" x="19" y="31" width="68" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+		<element kind="staticText" uuid="23cc93a9-8905-430d-b5fa-e62b14614fc9" x="18" y="181" width="68" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
 			<text><![CDATA[To Date]]></text>
 		</element>
-		<element kind="textField" uuid="fb7be9ad-fb9c-40f2-87f1-1ecf50e8d709" x="127" y="31" width="113" height="12" fontName="Arial Custom" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="fb7be9ad-fb9c-40f2-87f1-1ecf50e8d709" x="126" y="181" width="113" height="12" fontName="Arial Custom" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$P{P_TO_DATE}]]></expression>
 		</element>
-		<element kind="textField" uuid="b6da5474-ec0e-48ab-9a9f-cbc82338b0f8" x="418" y="31" width="100" height="12" fontName="Arial Custom" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="b6da5474-ec0e-48ab-9a9f-cbc82338b0f8" x="417" y="181" width="100" height="12" fontName="Arial Custom" hTextAlign="Right" vTextAlign="Middle">
 			<expression><![CDATA[$P{P_FROM_DATE}]]></expression>
+		</element>
+		<element kind="subreport" uuid="3372a5bf-4ace-448e-a551-333ca14e5099" x="3" y="1" width="576" height="139">
+			<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+			<expression><![CDATA["header_sub.jrxml"]]></expression>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<parameter name="P_COMPANY_ID">
+				<expression><![CDATA[$P{P_COMPANY_ID}]]></expression>
+			</parameter>
 		</element>
 	</pageHeader>
 	<columnHeader height="55">
-		<element kind="staticText" uuid="ce7d0ff5-2714-4ce8-b918-909f362e2557" x="473" y="20" width="105" height="30" backcolor="#D7D9D9" fontName="Arial Custom" fontSize="10.0" bold="true" italic="false" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="ce7d0ff5-2714-4ce8-b918-909f362e2557" x="473" y="20" width="105" height="30" backcolor="#D7D9D9" fontName="Arial Custom" fontSize="10.0" italic="false" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[Amount
 مبلغ السند]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="160bb1cf-83be-40fa-93cf-06deb8a45cca"/>
@@ -96,7 +94,7 @@ WHERE
 				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="a7cc1256-8be0-4635-a2a9-4994b6a96d41" x="374" y="20" width="99" height="30" backcolor="#D7D9D9" fontName="Arial Custom" fontSize="10.0" bold="true" italic="false" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="a7cc1256-8be0-4635-a2a9-4994b6a96d41" x="374" y="20" width="99" height="30" backcolor="#D7D9D9" fontName="Arial Custom" fontSize="10.0" italic="false" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[Voucher Date
 تاريخ السند]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="160bb1cf-83be-40fa-93cf-06deb8a45cca"/>
@@ -108,7 +106,7 @@ WHERE
 				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="d4e6cb86-fb9e-4856-8068-8a4da3df24bb" x="304" y="20" width="70" height="30" backcolor="#D7D9D9" fontName="Arial Custom" fontSize="10.0" bold="true" italic="false" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="d4e6cb86-fb9e-4856-8068-8a4da3df24bb" x="304" y="20" width="70" height="30" backcolor="#D7D9D9" fontName="Arial Custom" fontSize="10.0" italic="false" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[Voucher No.
 رقم السند]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="160bb1cf-83be-40fa-93cf-06deb8a45cca"/>
@@ -120,7 +118,7 @@ WHERE
 				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="11b4d2dd-2433-4ac1-9c8c-84b36980eb96" x="3" y="20" width="301" height="30" backcolor="#D7D9D9" fontName="Arial Custom" fontSize="10.0" bold="true" italic="false" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="11b4d2dd-2433-4ac1-9c8c-84b36980eb96" x="3" y="20" width="301" height="30" backcolor="#D7D9D9" fontName="Arial Custom" fontSize="10.0" italic="false" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[Note
 البيان]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="160bb1cf-83be-40fa-93cf-06deb8a45cca"/>

@@ -106,19 +106,8 @@ WHERE INVOICE_ID = $P{P_INV_ID}]]></query>
 		<property name="com.jaspersoft.studio.field.label" value="QR_CODE"/>
 	</field>
 	<background splitType="Stretch"/>
-	<title height="29" splitType="Stretch">
-		<element kind="subreport" uuid="a7e764ff-8415-44a4-a418-860318f14a8e" x="3" y="2" width="576" height="23">
-			<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-			<expression><![CDATA["header_sub.jrxml"]]></expression>
-			<property name="com.jaspersoft.studio.unit.width" value="px"/>
-			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			<parameter name="P_COMPANY_ID">
-				<expression><![CDATA[$P{P_COMPANY_ID}]]></expression>
-			</parameter>
-		</element>
-	</title>
-	<pageHeader height="75" splitType="Stretch">
-		<element kind="frame" uuid="5e143e13-da7f-4a58-af79-eb9e299785a5" x="10" y="20" width="570" height="50">
+	<pageHeader height="222" splitType="Stretch">
+		<element kind="frame" uuid="5e143e13-da7f-4a58-af79-eb9e299785a5" x="6" y="168" width="570" height="50">
 			<box>
 				<pen lineWidth="0.25"/>
 				<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
@@ -127,13 +116,13 @@ WHERE INVOICE_ID = $P{P_INV_ID}]]></query>
 				<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="db86ea1d-c501-4cbb-b828-823185215e23" x="540" y="30" width="30" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
+		<element kind="staticText" uuid="db86ea1d-c501-4cbb-b828-823185215e23" x="536" y="178" width="30" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
 			<text><![CDATA[الفرع]]></text>
 		</element>
-		<element kind="staticText" uuid="f15f8196-7f3a-407c-9eae-07cdc47df506" x="540" y="51" width="30" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
+		<element kind="staticText" uuid="f15f8196-7f3a-407c-9eae-07cdc47df506" x="536" y="199" width="30" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
 			<text><![CDATA[من تاريخ]]></text>
 		</element>
-		<element kind="staticText" uuid="dd2b8e9e-ee6d-48be-92f0-62f7de470667" x="181" y="0" width="240" height="20" fontName="Arial Custom" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="dd2b8e9e-ee6d-48be-92f0-62f7de470667" x="177" y="148" width="240" height="20" fontName="Arial Custom" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[تقرير المشتريات - Purchases Report]]></text>
 			<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
 				<pen lineWidth="0.25"/>
@@ -143,23 +132,32 @@ WHERE INVOICE_ID = $P{P_INV_ID}]]></query>
 				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="8a4851a5-1f36-4917-a964-59b1261bb45a" x="240" y="50" width="33" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
+		<element kind="staticText" uuid="8a4851a5-1f36-4917-a964-59b1261bb45a" x="236" y="198" width="33" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
 			<text><![CDATA[الى تاريخ ]]></text>
 		</element>
-		<element kind="staticText" uuid="429fa5ed-9919-4868-9826-e0e1e417c474" x="240" y="30" width="33" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
+		<element kind="staticText" uuid="429fa5ed-9919-4868-9826-e0e1e417c474" x="236" y="178" width="33" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
 			<text><![CDATA[المورد]]></text>
 		</element>
-		<element kind="staticText" uuid="bd61814e-8035-43d9-bf1d-27533f872b5c" x="305" y="28" width="35" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+		<element kind="staticText" uuid="bd61814e-8035-43d9-bf1d-27533f872b5c" x="301" y="176" width="35" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
 			<text><![CDATA[Branch]]></text>
 		</element>
-		<element kind="staticText" uuid="7262f781-dea4-47bc-ae35-e98c0074561f" x="305" y="49" width="55" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+		<element kind="staticText" uuid="7262f781-dea4-47bc-ae35-e98c0074561f" x="301" y="197" width="55" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
 			<text><![CDATA[From Date]]></text>
 		</element>
-		<element kind="staticText" uuid="23cc93a9-8905-430d-b5fa-e62b14614fc9" x="19" y="50" width="68" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+		<element kind="staticText" uuid="23cc93a9-8905-430d-b5fa-e62b14614fc9" x="15" y="198" width="68" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
 			<text><![CDATA[To Date]]></text>
 		</element>
-		<element kind="staticText" uuid="74d5a5c7-9b0a-439e-83d4-25cf82eef877" x="19" y="30" width="68" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+		<element kind="staticText" uuid="74d5a5c7-9b0a-439e-83d4-25cf82eef877" x="15" y="178" width="68" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
 			<text><![CDATA[Provider]]></text>
+		</element>
+		<element kind="subreport" uuid="006669cb-99b9-4e88-9cf8-f45051f8947e" x="3" y="1" width="576" height="139">
+			<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+			<expression><![CDATA["header_sub.jrxml"]]></expression>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<parameter name="P_COMPANY_ID">
+				<expression><![CDATA[$P{P_COMPANY_ID}]]></expression>
+			</parameter>
 		</element>
 	</pageHeader>
 	<detail>

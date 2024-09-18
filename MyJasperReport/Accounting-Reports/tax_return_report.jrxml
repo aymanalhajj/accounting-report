@@ -103,8 +103,8 @@ FROM
 		<expression><![CDATA[$F{VAT_OF_PURCHASES_UNDER_VAT}+$F{OPERATIONAL_EXPENSES_VAT}]]></expression>
 	</variable>
 	<background splitType="Stretch"/>
-	<title height="29" splitType="Stretch">
-		<element kind="subreport" uuid="a7e764ff-8415-44a4-a418-860318f14a8e" x="3" y="2" width="576" height="23">
+	<pageHeader height="146">
+		<element kind="subreport" uuid="983019ce-5e81-4068-91de-fbdf53c5d81c" x="3" y="1" width="576" height="139">
 			<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 			<expression><![CDATA["header_sub.jrxml"]]></expression>
 			<property name="com.jaspersoft.studio.unit.width" value="px"/>
@@ -113,7 +113,7 @@ FROM
 				<expression><![CDATA[$P{P_COMPANY_ID}]]></expression>
 			</parameter>
 		</element>
-	</title>
+	</pageHeader>
 	<detail>
 		<band height="564" splitType="Stretch">
 			<element kind="staticText" uuid="ac4bef16-d75e-49f0-a77a-5a679e958be3" x="456" y="121" width="110" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">

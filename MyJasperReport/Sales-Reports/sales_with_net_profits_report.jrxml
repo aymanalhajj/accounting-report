@@ -24,22 +24,11 @@
 		<property name="com.jaspersoft.studio.field.label" value="DUMMY"/>
 	</field>
 	<background splitType="Stretch"/>
-	<title height="29" splitType="Stretch">
-		<element kind="subreport" uuid="a7e764ff-8415-44a4-a418-860318f14a8e" x="3" y="2" width="576" height="23">
-			<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-			<expression><![CDATA["header_sub.jrxml"]]></expression>
-			<property name="com.jaspersoft.studio.unit.width" value="px"/>
-			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			<parameter name="P_COMPANY_ID">
-				<expression><![CDATA[$P{P_COMPANY_ID}]]></expression>
-			</parameter>
-		</element>
-	</title>
-	<pageHeader height="75" splitType="Stretch">
-		<element kind="staticText" uuid="f15f8196-7f3a-407c-9eae-07cdc47df506" x="530" y="51" width="40" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
+	<pageHeader height="220" splitType="Stretch">
+		<element kind="staticText" uuid="f15f8196-7f3a-407c-9eae-07cdc47df506" x="535" y="199" width="40" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
 			<text><![CDATA[من تاريخ]]></text>
 		</element>
-		<element kind="staticText" uuid="dd2b8e9e-ee6d-48be-92f0-62f7de470667" x="181" y="0" width="259" height="20" fontName="Arial Custom" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="dd2b8e9e-ee6d-48be-92f0-62f7de470667" x="186" y="148" width="259" height="20" fontName="Arial Custom" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[صافي مبيعات وارباح - Sales and Profits]]></text>
 			<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
 				<pen lineWidth="0.25"/>
@@ -49,26 +38,35 @@
 				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="8a4851a5-1f36-4917-a964-59b1261bb45a" x="240" y="50" width="40" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="8a4851a5-1f36-4917-a964-59b1261bb45a" x="245" y="198" width="40" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[الى تاريخ ]]></text>
 		</element>
-		<element kind="staticText" uuid="7262f781-dea4-47bc-ae35-e98c0074561f" x="305" y="49" width="55" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+		<element kind="staticText" uuid="7262f781-dea4-47bc-ae35-e98c0074561f" x="310" y="197" width="55" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
 			<text><![CDATA[From Date]]></text>
 		</element>
-		<element kind="staticText" uuid="23cc93a9-8905-430d-b5fa-e62b14614fc9" x="19" y="50" width="68" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+		<element kind="staticText" uuid="23cc93a9-8905-430d-b5fa-e62b14614fc9" x="24" y="198" width="68" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
 			<text><![CDATA[To Date]]></text>
 		</element>
-		<element kind="textField" uuid="fb7be9ad-fb9c-40f2-87f1-1ecf50e8d709" x="127" y="51" width="100" height="12" fontName="Arial Custom" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="textField" uuid="fb7be9ad-fb9c-40f2-87f1-1ecf50e8d709" x="132" y="199" width="100" height="12" fontName="Arial Custom" hTextAlign="Center" vTextAlign="Middle">
 			<expression><![CDATA[$P{P_TO_DATE}]]></expression>
 		</element>
-		<element kind="textField" uuid="b6da5474-ec0e-48ab-9a9f-cbc82338b0f8" x="421" y="51" width="100" height="12" fontName="Arial Custom" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="textField" uuid="b6da5474-ec0e-48ab-9a9f-cbc82338b0f8" x="426" y="199" width="100" height="12" fontName="Arial Custom" hTextAlign="Center" vTextAlign="Middle">
 			<expression><![CDATA[$P{P_FROM_DATE}]]></expression>
 		</element>
-		<element kind="staticText" uuid="b8c202c8-356c-4f72-81e0-606b4acdea8b" x="521" y="30" width="48" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
+		<element kind="staticText" uuid="b8c202c8-356c-4f72-81e0-606b4acdea8b" x="526" y="178" width="48" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Right">
 			<text><![CDATA[التكلفة حسب:]]></text>
 		</element>
-		<element kind="staticText" uuid="bce7501d-f5fa-416e-842a-58fb55953fcd" x="305" y="28" width="75" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+		<element kind="staticText" uuid="bce7501d-f5fa-416e-842a-58fb55953fcd" x="310" y="176" width="75" height="12" fontName="Arial Custom" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
 			<text><![CDATA[Cost based on]]></text>
+		</element>
+		<element kind="subreport" uuid="c730eb7d-5c47-454a-b7ec-4c39bfe49f4a" x="3" y="1" width="576" height="139">
+			<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+			<expression><![CDATA["header_sub.jrxml"]]></expression>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<parameter name="P_COMPANY_ID">
+				<expression><![CDATA[$P{P_COMPANY_ID}]]></expression>
+			</parameter>
 		</element>
 	</pageHeader>
 	<detail>
